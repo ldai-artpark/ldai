@@ -3,7 +3,7 @@ import {Disclosure, Menu, Transition} from '@headlessui/react';
 import {MenuIcon as Bars3Icon, XIcon as XMarkIcon,} from '@heroicons/react/outline';
 import {useUser} from "@auth0/nextjs-auth0";
 import setup from "../../setup";
-import Avatar from "@common/components/Avatar";
+import Avatar from "../../common/components/Avatar";
 import dynamic from "next/dynamic";
 import clsx from "clsx";
 import Link from "next/link";

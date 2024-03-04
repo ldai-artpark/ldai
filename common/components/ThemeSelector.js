@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {MoonIcon, SunIcon} from "@heroicons/react/outline";
-import useTheme from "@common/hooks/useTheme";
+import useTheme from "../hooks/useTheme";
 
 
 const ThemeSelector = props => {

@@ -1,6 +1,6 @@
 import React, {Suspense} from 'react';
 import Link from "next/link";
-import ThemeSelector from "@common/components/ThemeSelector";
+import ThemeSelector from "../../common/components/ThemeSelector";
 import setup from "../../setup";
 import clsx from "clsx";
 

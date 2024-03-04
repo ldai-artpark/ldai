@@ -5,7 +5,7 @@ import {AgGridReact} from "ag-grid-react";
 import 'ag-grid-community/styles/ag-grid.css'; // Core grid CSS, always needed
 import 'ag-grid-community/styles/ag-theme-alpine.min.css'; // Optional theme CSS
 import clsx from "clsx";
-import useCurrentTheme from "@common/hooks/useCurrentTheme";
+import useCurrentTheme from "../common/hooks/useCurrentTheme";
 import LoadingState from "./LoadingState";
 import {useSelector} from "react-redux";
 
