@@ -3,6 +3,7 @@ import setup from "../setup";
 import DashboardLayout from "../components/layouts/DashboardLayout";
 
 export default function NoAccess() {
+    
 
     return (
         <DashboardLayout>
