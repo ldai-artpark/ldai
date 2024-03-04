@@ -1,0 +1,2297 @@
+[
+  {
+    "assertLanguage": "AGARIYA",
+    "district": "Jashpur",
+    "duration": 0.0328063888888889
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Araria",
+    "duration": 1.29004194444445
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Begusarai",
+    "duration": 10.6312036111111
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Bhagalpur",
+    "duration": 16.4676955555556
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Jamui",
+    "duration": 0.148330833333333
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Madhepura",
+    "duration": 2.53238805555556
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Muzaffarpur",
+    "duration": 0.143488888888889
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Purnia",
+    "duration": 6.66374
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Saharsa",
+    "duration": 1.68918972222222
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Sahebganj",
+    "duration": 0.629361944444444
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Samastipur",
+    "duration": 2.37411027777778
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Sitamarhi",
+    "duration": 0.362151388888889
+  },
+  {
+    "assertLanguage": "ANGIKA",
+    "district": "Supaul",
+    "duration": 1.51702027777778
+  },
+  {
+    "assertLanguage": "ASSAMESE",
+    "district": "Jalaun",
+    "duration": 0.1809875
+  },
+  {
+    "assertLanguage": "AWADHI",
+    "district": "Balrampur",
+    "duration": 4.02842777777778
+  },
+  {
+    "assertLanguage": "AWADHI",
+    "district": "Budaun",
+    "duration": 0.321181388888889
+  },
+  {
+    "assertLanguage": "AWADHI",
+    "district": "Deoria",
+    "duration": 0.0513291666666667
+  },
+  {
+    "assertLanguage": "AWADHI",
+    "district": "Ghazipur",
+    "duration": 0.307774444444444
+  },
+  {
+    "assertLanguage": "AWADHI",
+    "district": "Hamirpur",
+    "duration": 0.0587183333333333
+  },
+  {
+    "assertLanguage": "AWADHI",
+    "district": "Jalaun",
+    "duration": 0.156567222222222
+  },
+  {
+    "assertLanguage": "AWADHI",
+    "district": "Muzzaffarnagar",
+    "duration": 0.110455555555556
+  },
+  {
+    "assertLanguage": "AWADHI",
+    "district": "Varanasi",
+    "duration": 0.836948055555557
+  },
+  {
+    "assertLanguage": "BADAYUNI",
+    "district": "Budaun",
+    "duration": 0.463021666666667
+  },
+  {
+    "assertLanguage": "BAGRI",
+    "district": "Churu",
+    "duration": 0.482831944444445
+  },
+  {
+    "assertLanguage": "BAJJIKA",
+    "district": "Muzaffarpur",
+    "duration": 0.299596666666667
+  },
+  {
+    "assertLanguage": "BAJJIKA",
+    "district": "Samastipur",
+    "duration": 0.0696897222222222
+  },
+  {
+    "assertLanguage": "BAJJIKA",
+    "district": "Sitamarhi",
+    "duration": 0.947780833333333
+  },
+  {
+    "assertLanguage": "BAJJIKA",
+    "district": "Vaishali",
+    "duration": 44.699270277778
+  },
+  {
+    "assertLanguage": "BANTAR",
+    "district": "Sitamarhi",
+    "duration": 0.599868333333333
+  },
+  {
+    "assertLanguage": "BEARYBASHE",
+    "district": "Bellary",
+    "duration": 0.486150833333334
+  },
+  {
+    "assertLanguage": "BEARYBASHE",
+    "district": "DakshinKannada",
+    "duration": 2.10333027777778
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Anantpur",
+    "duration": 0.991037499999999
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Araria",
+    "duration": 0.203043888888889
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Aurangabad",
+    "duration": 0.0905958333333333
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Bastar",
+    "duration": 0.113331111111111
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Bhagalpur",
+    "duration": 0.439435555555556
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Bijapur",
+    "duration": 1.36050083333333
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Bilaspur",
+    "duration": 0.578978888888889
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Budaun",
+    "duration": 0.177524166666667
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Chittoor",
+    "duration": 0.950155833333333
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Churu",
+    "duration": 0.414370277777778
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "DakshinDinajpur",
+    "duration": 144.96959583333
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "EastChamparan",
+    "duration": 1.01040861111111
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Gaya",
+    "duration": 0.107622777777778
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Ghazipur",
+    "duration": 0.187677777777778
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Gopalganj",
+    "duration": 0.197119444444444
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Guntur",
+    "duration": 0.35827
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Hamirpur",
+    "duration": 0.126720833333333
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Jahanabad",
+    "duration": 0.495976666666667
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Jalpaiguri",
+    "duration": 145.761533888887
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Jamtara",
+    "duration": 1.22805305555556
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Jamui",
+    "duration": 0.2530175
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Jashpur",
+    "duration": 0.2935075
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Jhargram",
+    "duration": 131.134852499999
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Karimnagar",
+    "duration": 0.508983333333333
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Kishanganj",
+    "duration": 2.72010888888889
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Kolkata",
+    "duration": 172.592435555556
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Krishna",
+    "duration": 0.2621575
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Madhepura",
+    "duration": 0.443607222222222
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Malda",
+    "duration": 147.388674166666
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Muzaffarpur",
+    "duration": 0.133076666666667
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Mysore",
+    "duration": 0.486857777777778
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Nagaur",
+    "duration": 0.144000277777778
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Nalgonda",
+    "duration": 0.194428888888889
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "North24Parganas",
+    "duration": 177.337796111108
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "NorthSouthGoa",
+    "duration": 0.319066388888889
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "PaschimMedinipur",
+    "duration": 120.865149166665
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Purulia",
+    "duration": 114.683294722222
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Rajnandgaon",
+    "duration": 0.220404722222222
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Saharsa",
+    "duration": 0.0891547222222223
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Sahebganj",
+    "duration": 0.276572222222222
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Sarguja",
+    "duration": 0.174810833333333
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Shimoga",
+    "duration": 0.0489775
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Solapur",
+    "duration": 0.151305277777778
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Sukma",
+    "duration": 0.280256111111111
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "TehriGarhwal",
+    "duration": 0.433229444444445
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Uttarkashi",
+    "duration": 0.210621944444445
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Vaishali",
+    "duration": 0.194096666666667
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Varanasi",
+    "duration": 0.214952777777778
+  },
+  {
+    "assertLanguage": "BENGALI",
+    "district": "Vishakapattanam",
+    "duration": 0.267365277777778
+  },
+  {
+    "assertLanguage": "BHATRI",
+    "district": "Bastar",
+    "duration": 0.809286944444445
+  },
+  {
+    "assertLanguage": "BHILI",
+    "district": "Dhule",
+    "duration": 2.44908361111111
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Araria",
+    "duration": 0.179589722222222
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Begusarai",
+    "duration": 1.00329555555556
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Bhagalpur",
+    "duration": 0.138624444444444
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Deoria",
+    "duration": 50.3256244444443
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Dharwad",
+    "duration": 0.258413055555556
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "EastChamparan",
+    "duration": 14.0852363888889
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Gaya",
+    "duration": 0.2932725
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Ghazipur",
+    "duration": 23.060526388889
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Gopalganj",
+    "duration": 25.7923361111112
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Gorakhpur",
+    "duration": 40.9255230555554
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Jamtara",
+    "duration": 0.205721111111111
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Jhargram",
+    "duration": 0.2380775
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Lakhisarai",
+    "duration": 0.887425277777777
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Muzaffarpur",
+    "duration": 0.633057777777778
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Raichur",
+    "duration": 0.261636388888889
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Sahebganj",
+    "duration": 0.916703888888888
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Samastipur",
+    "duration": 0.773911111111112
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Saran",
+    "duration": 51.3062077777776
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Sitamarhi",
+    "duration": 1.66749361111111
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Srikakulam",
+    "duration": 0.196726666666667
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Supaul",
+    "duration": 1.46610166666667
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Vaishali",
+    "duration": 1.16762916666667
+  },
+  {
+    "assertLanguage": "BHOJPURI",
+    "district": "Varanasi",
+    "duration": 20.5657902777778
+  },
+  {
+    "assertLanguage": "BUNDELI",
+    "district": "Budaun",
+    "duration": 2.43588138888889
+  },
+  {
+    "assertLanguage": "BUNDELI",
+    "district": "Hamirpur",
+    "duration": 1.00216555555556
+  },
+  {
+    "assertLanguage": "BUNDELI",
+    "district": "Jalaun",
+    "duration": 2.31012666666667
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Balrampur",
+    "duration": 6.56773055555555
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Bastar",
+    "duration": 8.00180555555553
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Bilaspur",
+    "duration": 9.78951777777778
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Ghazipur",
+    "duration": 0.250895277777778
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Jashpur",
+    "duration": 32.8119188888888
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Kabirdham",
+    "duration": 10.2457919444444
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Korba",
+    "duration": 14.270185
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Nagpur",
+    "duration": 0.163260277777778
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Purnia",
+    "duration": 0.0498025
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Raigarh",
+    "duration": 15.5410547222222
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Rajnandgaon",
+    "duration": 19.2387361111112
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Saharsa",
+    "duration": 0.162535277777778
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Sahebganj",
+    "duration": 0.0338636111111111
+  },
+  {
+    "assertLanguage": "CHATTISGARHI",
+    "district": "Sarguja",
+    "duration": 30.9691355555557
+  },
+  {
+    "assertLanguage": "DORLI",
+    "district": "Sukma",
+    "duration": 1.30543555555556
+  },
+  {
+    "assertLanguage": "DURUWA",
+    "district": "Sukma",
+    "duration": 0.500346111111111
+  },
+  {
+    "assertLanguage": "ENGLISH",
+    "district": "Bellary",
+    "duration": 0.387628055555555
+  },
+  {
+    "assertLanguage": "ENGLISH",
+    "district": "Bijapur",
+    "duration": 0.104488055555556
+  },
+  {
+    "assertLanguage": "ENGLISH",
+    "district": "Churu",
+    "duration": 0.0644819444444444
+  },
+  {
+    "assertLanguage": "ENGLISH",
+    "district": "Etah",
+    "duration": 0.0880677777777778
+  },
+  {
+    "assertLanguage": "ENGLISH",
+    "district": "Guntur",
+    "duration": 0.0742913888888889
+  },
+  {
+    "assertLanguage": "ENGLISH",
+    "district": "JyotibaPhuleNagar",
+    "duration": 0.121199722222222
+  },
+  {
+    "assertLanguage": "ENGLISH",
+    "district": "Karimnagar",
+    "duration": 0.612688055555556
+  },
+  {
+    "assertLanguage": "ENGLISH",
+    "district": "Krishna",
+    "duration": 0.0433863888888889
+  },
+  {
+    "assertLanguage": "ENGLISH",
+    "district": "Rajnandgaon",
+    "duration": 0.0904519444444445
+  },
+  {
+    "assertLanguage": "ENGLISH",
+    "district": "Sahebganj",
+    "duration": 0.0463827777777778
+  },
+  {
+    "assertLanguage": "GARHWALI",
+    "district": "TehriGarhwal",
+    "duration": 32.3015830555554
+  },
+  {
+    "assertLanguage": "GARHWALI",
+    "district": "Uttarkashi",
+    "duration": 22.2534405555555
+  },
+  {
+    "assertLanguage": "GONDI",
+    "district": "Bastar",
+    "duration": 0.0940233333333334
+  },
+  {
+    "assertLanguage": "GONDI",
+    "district": "Sukma",
+    "duration": 0.728896111111111
+  },
+  {
+    "assertLanguage": "GUJARATI",
+    "district": "Churu",
+    "duration": 0.187573888888889
+  },
+  {
+    "assertLanguage": "GUJARATI",
+    "district": "Jalaun",
+    "duration": 0.0854202777777778
+  },
+  {
+    "assertLanguage": "GUJARATI",
+    "district": "Nagpur",
+    "duration": 0.0516658333333333
+  },
+  {
+    "assertLanguage": "GUJARATI",
+    "district": "NorthSouthGoa",
+    "duration": 0.181041111111111
+  },
+  {
+    "assertLanguage": "HALBI",
+    "district": "Bastar",
+    "duration": 33.8856897222224
+  },
+  {
+    "assertLanguage": "HARAUTI",
+    "district": "Churu",
+    "duration": 0.270018888888889
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Anantpur",
+    "duration": 45.8463747222221
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Araria",
+    "duration": 115.026179722224
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Aurangabad",
+    "duration": 38.4606597222224
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Balrampur",
+    "duration": 137.671679722222
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Bastar",
+    "duration": 68.8437716666666
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Begusarai",
+    "duration": 91.3033744444442
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Belgaum",
+    "duration": 10.9343761111111
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Bellary",
+    "duration": 7.98169805555557
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Bhagalpur",
+    "duration": 102.554541666666
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Bijapur",
+    "duration": 9.05874583333332
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Bilaspur",
+    "duration": 158.833049722223
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Budaun",
+    "duration": 134.100605833333
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Chamrajnagar",
+    "duration": 5.00678194444444
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Chandrapur",
+    "duration": 41.977064722222
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Chittoor",
+    "duration": 23.2977575
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Churu",
+    "duration": 52.0248655555557
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "DakshinDinajpur",
+    "duration": 7.53223638888887
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "DakshinKannada",
+    "duration": 11.7467216666667
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Darbhanga",
+    "duration": 139.365278333334
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Deoria",
+    "duration": 77.9529883333338
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Dharwad",
+    "duration": 8.07803472222221
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Dhule",
+    "duration": 42.425076666667
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "EastChamparan",
+    "duration": 133.786210833331
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Etah",
+    "duration": 142.877112499999
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Gaya",
+    "duration": 158.94506
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Ghazipur",
+    "duration": 84.4447811111109
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Gopalganj",
+    "duration": 168.051059444445
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Gorakhpur",
+    "duration": 96.803616666666
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Gulbarga",
+    "duration": 15.3660847222222
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Guntur",
+    "duration": 15.062736388889
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Hamirpur",
+    "duration": 135.621085833333
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Jahanabad",
+    "duration": 135.315116388889
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Jalaun",
+    "duration": 150.415830555555
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Jalpaiguri",
+    "duration": 5.87648444444445
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Jamtara",
+    "duration": 134.356315277778
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Jamui",
+    "duration": 143.241394444443
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Jashpur",
+    "duration": 36.0953011111112
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Jhargram",
+    "duration": 2.67297111111111
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "JyotibaPhuleNagar",
+    "duration": 122.146106944443
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Kabirdham",
+    "duration": 68.5687375000005
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Karimnagar",
+    "duration": 5.90577222222223
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Kishanganj",
+    "duration": 125.499468055556
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Kolkata",
+    "duration": 9.42108666666666
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Korba",
+    "duration": 74.9391655555557
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Krishna",
+    "duration": 15.27847
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Lakhisarai",
+    "duration": 136.435512222222
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Madhepura",
+    "duration": 79.1805777777778
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Malda",
+    "duration": 6.17699833333334
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Muzaffarpur",
+    "duration": 115.717005
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Muzzaffarnagar",
+    "duration": 95.6019686111117
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Mysore",
+    "duration": 12.1478608333334
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Nagaur",
+    "duration": 46.8196194444444
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Nagpur",
+    "duration": 68.5141855555552
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Nalgonda",
+    "duration": 5.78494083333332
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "North24Parganas",
+    "duration": 2.51716388888889
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "NorthSouthGoa",
+    "duration": 44.6408138888889
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "PaschimMedinipur",
+    "duration": 1.66545361111111
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Pune",
+    "duration": 31.1936872222222
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Purnia",
+    "duration": 144.385752222221
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Purulia",
+    "duration": 15.4209036111111
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Raichur",
+    "duration": 7.96166777777777
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Raigarh",
+    "duration": 117.210984999999
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Rajnandgaon",
+    "duration": 88.2283555555554
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Saharsa",
+    "duration": 89.456054999999
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Sahebganj",
+    "duration": 122.616209722223
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Samastipur",
+    "duration": 95.4142049999991
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Saran",
+    "duration": 142.236179722222
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Sarguja",
+    "duration": 76.6388308333336
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Shimoga",
+    "duration": 4.66363555555556
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Sindhudurga",
+    "duration": 38.0907438888888
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Sitamarhi",
+    "duration": 166.296564166663
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Solapur",
+    "duration": 41.9937275000001
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Srikakulam",
+    "duration": 10.2063444444444
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Sukma",
+    "duration": 25.8229694444443
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Supaul",
+    "duration": 76.1824211111108
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "TehriGarhwal",
+    "duration": 65.8742266666664
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Uttarkashi",
+    "duration": 79.2944927777774
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Vaishali",
+    "duration": 46.3018830555555
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Varanasi",
+    "duration": 123.00359361111
+  },
+  {
+    "assertLanguage": "HINDI",
+    "district": "Vishakapattanam",
+    "duration": 9.27811777777778
+  },
+  {
+    "assertLanguage": "JAIPURI",
+    "district": "Churu",
+    "duration": 0.699385555555555
+  },
+  {
+    "assertLanguage": "JAIPURI",
+    "district": "Nagaur",
+    "duration": 1.08818694444445
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Anantpur",
+    "duration": 0.126278888888889
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Belgaum",
+    "duration": 80.0881241666668
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Bellary",
+    "duration": 114.738858333333
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Bijapur",
+    "duration": 106.169646666668
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Chamrajnagar",
+    "duration": 117.08659
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "DakshinKannada",
+    "duration": 63.9541052777777
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Darbhanga",
+    "duration": 0.121983333333333
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Dharwad",
+    "duration": 100.597325555555
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Gulbarga",
+    "duration": 60.3960227777776
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Muzzaffarnagar",
+    "duration": 0.103509166666667
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Mysore",
+    "duration": 159.117255277778
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "NorthSouthGoa",
+    "duration": 0.283005
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Raichur",
+    "duration": 71.2250766666663
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Rajnandgaon",
+    "duration": 0.116768611111111
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Saharsa",
+    "duration": 0.227036944444444
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Shimoga",
+    "duration": 116.93437888889
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Solapur",
+    "duration": 0.2047775
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Srikakulam",
+    "duration": 0.25566
+  },
+  {
+    "assertLanguage": "KANNADA",
+    "district": "Vishakapattanam",
+    "duration": 0.205348055555556
+  },
+  {
+    "assertLanguage": "KHANDESHI",
+    "district": "Dhule",
+    "duration": 4.13319222222224
+  },
+  {
+    "assertLanguage": "KHARI BOLI",
+    "district": "Budaun",
+    "duration": 3.74057666666667
+  },
+  {
+    "assertLanguage": "KHARI BOLI",
+    "district": "Deoria",
+    "duration": 0.222983333333333
+  },
+  {
+    "assertLanguage": "KHARI BOLI",
+    "district": "Etah",
+    "duration": 2.62007944444445
+  },
+  {
+    "assertLanguage": "KHARI BOLI",
+    "district": "Ghazipur",
+    "duration": 0.276291944444444
+  },
+  {
+    "assertLanguage": "KHARI BOLI",
+    "district": "Gorakhpur",
+    "duration": 0.755046388888889
+  },
+  {
+    "assertLanguage": "KHARI BOLI",
+    "district": "Hamirpur",
+    "duration": 1.56204138888889
+  },
+  {
+    "assertLanguage": "KHARI BOLI",
+    "district": "Jalaun",
+    "duration": 1.01910277777778
+  },
+  {
+    "assertLanguage": "KHARI BOLI",
+    "district": "JyotibaPhuleNagar",
+    "duration": 1.73101388888889
+  },
+  {
+    "assertLanguage": "KHARI BOLI",
+    "district": "Muzzaffarnagar",
+    "duration": 3.61296666666667
+  },
+  {
+    "assertLanguage": "KHARI BOLI",
+    "district": "Varanasi",
+    "duration": 0.326319444444444
+  },
+  {
+    "assertLanguage": "KHORTHA",
+    "district": "Jamtara",
+    "duration": 10.940595
+  },
+  {
+    "assertLanguage": "KHORTHA",
+    "district": "Madhepura",
+    "duration": 0.106541944444444
+  },
+  {
+    "assertLanguage": "KHORTHA",
+    "district": "Sahebganj",
+    "duration": 1.95157694444445
+  },
+  {
+    "assertLanguage": "KHORTHA",
+    "district": "Sitamarhi",
+    "duration": 0.126446111111111
+  },
+  {
+    "assertLanguage": "KONKANI",
+    "district": "Lakhisarai",
+    "duration": 0.1734475
+  },
+  {
+    "assertLanguage": "KONKANI",
+    "district": "NorthSouthGoa",
+    "duration": 54.2517713888891
+  },
+  {
+    "assertLanguage": "KORTHA",
+    "district": "Sitamarhi",
+    "duration": 0.177318611111111
+  },
+  {
+    "assertLanguage": "KUDUKH",
+    "district": "Jashpur",
+    "duration": 0.283577777777778
+  },
+  {
+    "assertLanguage": "KUMAONI",
+    "district": "TehriGarhwal",
+    "duration": 10.8513944444444
+  },
+  {
+    "assertLanguage": "KUMAONI",
+    "district": "Uttarkashi",
+    "duration": 12.0825508333333
+  },
+  {
+    "assertLanguage": "KURUKH",
+    "district": "Jashpur",
+    "duration": 1.74722277777778
+  },
+  {
+    "assertLanguage": "KURUKH",
+    "district": "Sarguja",
+    "duration": 3.33841777777778
+  },
+  {
+    "assertLanguage": "KURUMALI",
+    "district": "Muzaffarpur",
+    "duration": 0.858781944444445
+  },
+  {
+    "assertLanguage": "KURUMALI",
+    "district": "Sahebganj",
+    "duration": 0.127741111111111
+  },
+  {
+    "assertLanguage": "LAMBADI",
+    "district": "Mysore",
+    "duration": 0.214649444444444
+  },
+  {
+    "assertLanguage": "LAMBADI",
+    "district": "Nalgonda",
+    "duration": 0.2294775
+  },
+  {
+    "assertLanguage": "MAGAHI",
+    "district": "Begusarai",
+    "duration": 0.0535897222222222
+  },
+  {
+    "assertLanguage": "MAGAHI",
+    "district": "Bhagalpur",
+    "duration": 0.247630555555556
+  },
+  {
+    "assertLanguage": "MAGAHI",
+    "district": "Gaya",
+    "duration": 28.7197852777777
+  },
+  {
+    "assertLanguage": "MAGAHI",
+    "district": "Jahanabad",
+    "duration": 4.12642444444444
+  },
+  {
+    "assertLanguage": "MAGAHI",
+    "district": "Jamui",
+    "duration": 5.58237805555555
+  },
+  {
+    "assertLanguage": "MAGAHI",
+    "district": "Kishanganj",
+    "duration": 0.228671388888889
+  },
+  {
+    "assertLanguage": "MAGAHI",
+    "district": "Lakhisarai",
+    "duration": 19.884733888889
+  },
+  {
+    "assertLanguage": "MAGAHI",
+    "district": "Madhepura",
+    "duration": 0.204809444444444
+  },
+  {
+    "assertLanguage": "MAGAHI",
+    "district": "Saharsa",
+    "duration": 0.246364722222222
+  },
+  {
+    "assertLanguage": "MAGAHI",
+    "district": "Sahebganj",
+    "duration": 0.457840833333334
+  },
+  {
+    "assertLanguage": "MAGAHI",
+    "district": "Samastipur",
+    "duration": 13.4090752777778
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Araria",
+    "duration": 5.06452361111111
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Begusarai",
+    "duration": 20.8072613888889
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Bhagalpur",
+    "duration": 7.61999361111109
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Bilaspur",
+    "duration": 0.269473333333333
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Darbhanga",
+    "duration": 13.9672938888889
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Deoria",
+    "duration": 0.262281944444445
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "EastChamparan",
+    "duration": 1.97638305555556
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Gaya",
+    "duration": 2.40795583333333
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Gopalganj",
+    "duration": 1.89156944444445
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Jahanabad",
+    "duration": 2.18997472222223
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Jamtara",
+    "duration": 0.311255277777778
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Jamui",
+    "duration": 2.84656138888889
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Kabirdham",
+    "duration": 0.212754444444445
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Kishanganj",
+    "duration": 2.9715175
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Lakhisarai",
+    "duration": 2.2571325
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Madhepura",
+    "duration": 19.0503944444443
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Muzaffarpur",
+    "duration": 5.7663636111111
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Pune",
+    "duration": 0.453157777777778
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Purnia",
+    "duration": 3.5923575
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Saharsa",
+    "duration": 20.6372699999999
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Samastipur",
+    "duration": 76.400598333334
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Saran",
+    "duration": 2.84810638888889
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Sitamarhi",
+    "duration": 1.67814416666667
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Solapur",
+    "duration": 0.1179825
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Supaul",
+    "duration": 38.6867372222222
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Uttarkashi",
+    "duration": 0.481201944444445
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Vaishali",
+    "duration": 10.142105
+  },
+  {
+    "assertLanguage": "MAITHILI",
+    "district": "Vishakapattanam",
+    "duration": 0.0373122222222222
+  },
+  {
+    "assertLanguage": "MALAYALAM",
+    "district": "Belgaum",
+    "duration": 0.232373888888889
+  },
+  {
+    "assertLanguage": "MALAYALAM",
+    "district": "Bellary",
+    "duration": 0.164750277777778
+  },
+  {
+    "assertLanguage": "MALAYALAM",
+    "district": "Bijapur",
+    "duration": 0.241603333333333
+  },
+  {
+    "assertLanguage": "MALAYALAM",
+    "district": "Chamrajnagar",
+    "duration": 0.241935
+  },
+  {
+    "assertLanguage": "MALAYALAM",
+    "district": "DakshinKannada",
+    "duration": 0.329855277777778
+  },
+  {
+    "assertLanguage": "MALAYALAM",
+    "district": "Dharwad",
+    "duration": 0.238641666666667
+  },
+  {
+    "assertLanguage": "MALAYALAM",
+    "district": "Gulbarga",
+    "duration": 0.188775277777778
+  },
+  {
+    "assertLanguage": "MALAYALAM",
+    "district": "Mysore",
+    "duration": 0.204931111111111
+  },
+  {
+    "assertLanguage": "MALAYALAM",
+    "district": "Nalgonda",
+    "duration": 0.143221944444444
+  },
+  {
+    "assertLanguage": "MALAYALAM",
+    "district": "Raichur",
+    "duration": 0.235706944444445
+  },
+  {
+    "assertLanguage": "MALAYALAM",
+    "district": "Shimoga",
+    "duration": 0.214609722222222
+  },
+  {
+    "assertLanguage": "MALVANI",
+    "district": "Chandrapur",
+    "duration": 0.215321944444445
+  },
+  {
+    "assertLanguage": "MALVANI",
+    "district": "Nagpur",
+    "duration": 0.278002777777778
+  },
+  {
+    "assertLanguage": "MALVANI",
+    "district": "Sindhudurga",
+    "duration": 9.01574888888885
+  },
+  {
+    "assertLanguage": "MALVANI",
+    "district": "Solapur",
+    "duration": 0.104086111111111
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Anantpur",
+    "duration": 1.10284416666667
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Aurangabad",
+    "duration": 69.8798158333339
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Belgaum",
+    "duration": 23.1433444444444
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Bhagalpur",
+    "duration": 0.559706388888889
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Bilaspur",
+    "duration": 0.474633055555556
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Budaun",
+    "duration": 0.296918055555556
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Chandrapur",
+    "duration": 79.1212138888889
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Darbhanga",
+    "duration": 0.18625
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Deoria",
+    "duration": 0.328977777777778
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Dhule",
+    "duration": 94.3418766666657
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "EastChamparan",
+    "duration": 0.619916944444445
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Etah",
+    "duration": 0.419991666666666
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Gaya",
+    "duration": 1.00944138888889
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Ghazipur",
+    "duration": 0.369208333333333
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Gopalganj",
+    "duration": 0.401643888888889
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Gorakhpur",
+    "duration": 1.0392625
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Guntur",
+    "duration": 0.715805
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Hamirpur",
+    "duration": 0.580252222222222
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Jahanabad",
+    "duration": 0.524013055555555
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Jalaun",
+    "duration": 0.598491111111111
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Jalpaiguri",
+    "duration": 0.961018055555555
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Jamtara",
+    "duration": 0.424649166666667
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Jhargram",
+    "duration": 0.501630555555555
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "JyotibaPhuleNagar",
+    "duration": 0.566376666666667
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Kabirdham",
+    "duration": 0.184950833333333
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Kishanganj",
+    "duration": 0.175089722222222
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Krishna",
+    "duration": 0.123020833333333
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Lakhisarai",
+    "duration": 0.332408333333333
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Madhepura",
+    "duration": 0.128873055555556
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Malda",
+    "duration": 0.193246388888889
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Muzzaffarnagar",
+    "duration": 0.964374722222222
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Nagaur",
+    "duration": 0.06273
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Nagpur",
+    "duration": 77.0985166666668
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "North24Parganas",
+    "duration": 0.181231388888889
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "NorthSouthGoa",
+    "duration": 16.4787055555555
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Pune",
+    "duration": 126.014771388888
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Rajnandgaon",
+    "duration": 0.24635
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Sahebganj",
+    "duration": 0.457845555555556
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Saran",
+    "duration": 0.791688888888889
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Sindhudurga",
+    "duration": 59.9725036111109
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Solapur",
+    "duration": 57.0769449999994
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Srikakulam",
+    "duration": 0.161222777777778
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "TehriGarhwal",
+    "duration": 0.168501111111111
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Uttarkashi",
+    "duration": 0.273409166666667
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Vaishali",
+    "duration": 0.289816944444444
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Varanasi",
+    "duration": 0.593809722222222
+  },
+  {
+    "assertLanguage": "MARATHI",
+    "district": "Vishakapattanam",
+    "duration": 0.191483611111111
+  },
+  {
+    "assertLanguage": "MARWARI",
+    "district": "Churu",
+    "duration": 29.03228
+  },
+  {
+    "assertLanguage": "MARWARI",
+    "district": "Gaya",
+    "duration": 0.0390877777777778
+  },
+  {
+    "assertLanguage": "MARWARI",
+    "district": "Nagaur",
+    "duration": 38.937511666667
+  },
+  {
+    "assertLanguage": "MEWARI",
+    "district": "Churu",
+    "duration": 0.318342222222222
+  },
+  {
+    "assertLanguage": "MEWARI",
+    "district": "Nagaur",
+    "duration": 0.241684722222222
+  },
+  {
+    "assertLanguage": "NAGPURI",
+    "district": "Jashpur",
+    "duration": 1.99205055555556
+  },
+  {
+    "assertLanguage": "NEPALESE",
+    "district": "Vaishali",
+    "duration": 0.140566666666667
+  },
+  {
+    "assertLanguage": "ODIA",
+    "district": "Bastar",
+    "duration": 0.470089166666667
+  },
+  {
+    "assertLanguage": "ODIA",
+    "district": "Jashpur",
+    "duration": 0.121446944444445
+  },
+  {
+    "assertLanguage": "ODIA",
+    "district": "Sukma",
+    "duration": 0.386988333333333
+  },
+  {
+    "assertLanguage": "RAJASTHANI",
+    "district": "Churu",
+    "duration": 43.0700041666668
+  },
+  {
+    "assertLanguage": "RAJASTHANI",
+    "district": "Nagaur",
+    "duration": 34.2785799999998
+  },
+  {
+    "assertLanguage": "RAJBANGSHI",
+    "district": "Purulia",
+    "duration": 0.17408
+  },
+  {
+    "assertLanguage": "SADRI",
+    "district": "Jalpaiguri",
+    "duration": 0.564009166666667
+  },
+  {
+    "assertLanguage": "SADRI",
+    "district": "Jashpur",
+    "duration": 6.61130666666665
+  },
+  {
+    "assertLanguage": "SADRI",
+    "district": "Sitamarhi",
+    "duration": 0.278486944444444
+  },
+  {
+    "assertLanguage": "SANTALI",
+    "district": "Chittoor",
+    "duration": 0.0691591666666667
+  },
+  {
+    "assertLanguage": "SANTALI",
+    "district": "Sahebganj",
+    "duration": 1.53692694444444
+  },
+  {
+    "assertLanguage": "SHEKHAWATI",
+    "district": "Churu",
+    "duration": 0.771270833333334
+  },
+  {
+    "assertLanguage": "SURGUJIA",
+    "district": "Sarguja",
+    "duration": 4.14398388888888
+  },
+  {
+    "assertLanguage": "SURJAPURI",
+    "district": "Kishanganj",
+    "duration": 23.1736805555554
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Anantpur",
+    "duration": 1.03273111111111
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Bellary",
+    "duration": 0.7111225
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Chamrajnagar",
+    "duration": 3.23245833333334
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Chittoor",
+    "duration": 1.00665583333333
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Ghazipur",
+    "duration": 0.264728333333333
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Guntur",
+    "duration": 0.382546666666667
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Jamui",
+    "duration": 0.108888611111111
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Krishna",
+    "duration": 0.427528888888889
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Mysore",
+    "duration": 0.0684008333333333
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Shimoga",
+    "duration": 0.211563055555556
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Sitamarhi",
+    "duration": 0.123452222222222
+  },
+  {
+    "assertLanguage": "TAMIL",
+    "district": "Vishakapattanam",
+    "duration": 0.242293888888889
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Anantpur",
+    "duration": 101.361942777777
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Araria",
+    "duration": 0.0387702777777778
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Aurangabad",
+    "duration": 0.0621083333333333
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Begusarai",
+    "duration": 0.0458361111111111
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Belgaum",
+    "duration": 3.18721833333334
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Bellary",
+    "duration": 32.7676208333336
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Bhagalpur",
+    "duration": 0.140634166666667
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Bijapur",
+    "duration": 0.199632222222222
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Chamrajnagar",
+    "duration": 0.156711111111111
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Chittoor",
+    "duration": 84.5388705555557
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "DakshinKannada",
+    "duration": 0.150599444444444
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Dharwad",
+    "duration": 8.61657694444446
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Gulbarga",
+    "duration": 13.9811341666666
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Guntur",
+    "duration": 126.001358055556
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Karimnagar",
+    "duration": 182.123500277774
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Krishna",
+    "duration": 61.371258333333
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Lakhisarai",
+    "duration": 0.0503783333333333
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Madhepura",
+    "duration": 0.13262
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Mysore",
+    "duration": 0.242597222222222
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Nalgonda",
+    "duration": 136.67033361111
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Raichur",
+    "duration": 19.7770105555556
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Shimoga",
+    "duration": 0.153247777777778
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Srikakulam",
+    "duration": 136.303525555558
+  },
+  {
+    "assertLanguage": "TELUGU",
+    "district": "Vishakapattanam",
+    "duration": 102.389312222222
+  },
+  {
+    "assertLanguage": "TULU",
+    "district": "DakshinKannada",
+    "duration": 8.44141805555556
+  },
+  {
+    "assertLanguage": "UNKNOWN",
+    "district": "DakshinKannada",
+    "duration": 0.930662499999999
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Anantpur",
+    "duration": 9.33517166666669
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Araria",
+    "duration": 0.567728888888889
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Begusarai",
+    "duration": 0.205863611111111
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Belgaum",
+    "duration": 0.1738675
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Bellary",
+    "duration": 1.75162694444444
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Bijapur",
+    "duration": 0.424066944444444
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Budaun",
+    "duration": 0.607141944444445
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "DakshinKannada",
+    "duration": 6.08237916666668
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Darbhanga",
+    "duration": 0.292878888888889
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Dharwad",
+    "duration": 0.279306666666667
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "EastChamparan",
+    "duration": 0.262808333333333
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Ghazipur",
+    "duration": 0.235771666666667
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Gulbarga",
+    "duration": 0.770752500000001
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Guntur",
+    "duration": 8.12714361111111
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Hamirpur",
+    "duration": 0.0493075
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "JyotibaPhuleNagar",
+    "duration": 0.472631666666667
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Karimnagar",
+    "duration": 1.10793361111111
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Kishanganj",
+    "duration": 0.0526511111111111
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Muzzaffarnagar",
+    "duration": 0.406338333333333
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Mysore",
+    "duration": 2.58133861111111
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Pune",
+    "duration": 0.0443980555555556
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Purnia",
+    "duration": 0.220101944444445
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Raichur",
+    "duration": 0.284202222222222
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Samastipur",
+    "duration": 0.176113888888889
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Shimoga",
+    "duration": 0.317911944444445
+  },
+  {
+    "assertLanguage": "URDU",
+    "district": "Sitamarhi",
+    "duration": 0.217919166666667
+  },
+  {
+    "assertLanguage": "WAGDI",
+    "district": "Churu",
+    "duration": 0.251785277777778
+  }
+]

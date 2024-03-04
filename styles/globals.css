@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes wiggleAround {
+    from {
+        transform: perspective(9cm) rotateY(350deg);
+    }
+
+    to {
+        transform: perspective(9cm) rotateY(335deg);
+    }
+}
+
+.wiggle-around {
+    animation: wiggleAround 2s ease-in-out infinite alternate;
+}
+
+/*define css variables*/
+:root {
+    --gradientColor1: #09c2c2;
+    --gradientColor1Darker: #119494;
+    --gradientColor2: #4449ff;
+    --gradientColor2Darker: #181fa8;
+}
+
+.grayscale-logo {
+    filter: grayscale(100%);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--gradientColor1) 0%, var(--gradientColor2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-color 0.5s ease;
+}
+
+.text-india {
+    background: linear-gradient(135deg, #fa7d00 0%, #FFFFFF 50%, #0a7b00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-color 0.5s ease;
+    filter: drop-shadow(0 0 3px #000);
+}
+
+.text-gradient:hover {
+    background: linear-gradient(0deg, var(--gradientColor1) 0%, var(--gradientColor2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, var(--gradientColor1Darker) 0%, var(--gradientColor2Darker) 100%);
+    transition: background-color 0.5s ease;
+    color: #fff;
+}
+
+.bg-gradient:hover {
+    background: linear-gradient(0deg, var(--gradientColor1Darker) 0%, var(--gradientColor2Darker) 100%);
+}
+
+.choropleth path {
+    @apply stroke-zinc-400 dark:stroke-zinc-600;
+    stroke-width: 1px;
+}
+
+.sankey path {
+    mix-blend-mode: normal !important;
+
+}
+
+.btn-accent {
+    @apply text-white bg-gradient font-bold py-2 px-4 rounded;
+}
+
+.btn-outline {
+    @apply dark:text-zinc-200;
+}
