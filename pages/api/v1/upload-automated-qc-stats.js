@@ -59,8 +59,8 @@ uploadHandler.post( async (req,res) => {
 
         const fileReadPromise = new Promise((resolve, reject) => {
 
-            const results = {};
-            const newKeys = {};
+            let results = {};
+            let newKeys = {};
 
             readStream.pipe(csvParser({separator}))
                 .on("data", (data) => {

@@ -14,7 +14,7 @@ import {setUserDetails} from "../../slices/userSlice";
 
 // import ThemeSelector from "../ThemeSelector";
 
-const ThemeSelector = dynamic(() => import('@newron/common/components/ThemeSelector'), { ssr: false });
+const ThemeSelector = dynamic(() => import('../../common/components/ThemeSelector'), { ssr: false });
 
 const navigation = [
     { name: 'Dashboard', href: '/dashboard'  },
