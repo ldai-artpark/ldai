@@ -5,7 +5,7 @@ import * as d3 from 'd3';
 import * as topojson from 'topojson-client';
 import PropTypes from "prop-types";
 import {MAP_AREAS} from "../src/choroplethHelpers";
-import useCurrentTheme from "@newron/common/hooks/useCurrentTheme";
+import useCurrentTheme from "../common/hooks/useCurrentTheme";
 
 const jsonPath = (region) => `/maps/${region}.json`;
 const Choropleth = memo(({

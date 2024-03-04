@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {ScaleLoader} from "react-spinners";
-import useCurrentTheme from "@newron/common/hooks/useCurrentTheme";
+import useCurrentTheme from "@common/hooks/useCurrentTheme";
 
 const LoadingState = props => {
 

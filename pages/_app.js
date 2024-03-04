@@ -3,7 +3,7 @@ import Head from "next/head";
 import setup from "../setup";
 import {wrapper} from "../store/store";
 import {UserProvider} from "@auth0/nextjs-auth0";
-import useTheme from "@newron/common/hooks/useTheme";
+import useTheme from "../common/hooks/useTheme";
 
 import { MyContextProvider } from "../contexts/MyContext";
 

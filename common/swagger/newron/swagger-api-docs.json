@@ -1,0 +1,2692 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Newron Service API",
+    "description": "APIs for Newron App",
+    "contact": {
+      "name": "NewronAI technologies Private Limited",
+      "url": "https://newron.ai",
+      "email": "hello@newron.ai"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Local Server"
+    },
+    {
+      "url": "https://grpc-api-gateway-7boevord.uc.gateway.dev",
+      "description": "Staging Server"
+    },
+    {
+      "url": "https://api.newron.ai",
+      "description": "Production Server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Health Check",
+      "description": "Health Check API"
+    },
+    {
+      "name": "User Management",
+      "description": "User Management API"
+    },
+    {
+      "name": "Project Management",
+      "description": "Project Management API"
+    },
+    {
+      "name": "Application Management",
+      "description": "Application Management API"
+    },
+    {
+      "name": "Organization Management",
+      "description": "Organization Management API"
+    }
+  ],
+  "paths": {
+    "/v1/health": {
+      "get": {
+        "tags": [
+          "Health Check"
+        ],
+        "summary": "Health Check API",
+        "description": "Health Check API to check if the service is up and running",
+        "operationId": "GetHealth",
+        "responses": {
+          "200": {
+            "description": "Service is up and running",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/user": {
+      "post": {
+        "tags": [
+          "User Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Register User API",
+        "description": "Use this API to register a new user after successful authentication from auth0",
+        "operationId": "CreateUserProfile",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "User profile created or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/UserResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/users": {
+      "get": {
+        "tags": [
+          "User Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Get User Profile API",
+        "description": "Use this API to get user profile",
+        "operationId": "GetUserProfile",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "User Id of the user, (required if subject id is not provided)",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subject",
+            "in": "query",
+            "description": "Subject Id from Auth0 (required if userId is not provided)",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User profile fetched or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/UserResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "User Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Update User Profile API",
+        "description": "Use this API to update user profile",
+        "operationId": "UpdateUserProfile",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "User profile updated or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/UserResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Delete User Profile API",
+        "description": "Use this API to delete user profile",
+        "operationId": "DeleteUserProfile",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User profile deleted or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StandardResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/users/{userId}/settings": {
+      "post": {
+        "tags": [
+          "User Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Create or Update User Settings API",
+        "description": "Use this API to create or update user settings or configuration",
+        "operationId": "CreateUserProfileSettings",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSettingsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "User settings created/updated or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/UserResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Delete User Settings API",
+        "description": "Use this API to delete user settings or configuration",
+        "operationId": "DeleteSettingsRequest",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteSettingsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "User settings deleted or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/UserResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/users/{userId}/organizations": {
+      "get": {
+        "tags": [
+          "User Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Get User Managed Organizations API",
+        "description": "Use this API to get user managed organizations",
+        "operationId": "GetOrganizations",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User settings created/updated or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/GetOrganizationsResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/projects": {
+      "get": {
+        "tags": [
+          "Project Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Get Projects API",
+        "description": "Use this API to get projects",
+        "operationId": "GetProjects",
+        "parameters": [
+          {
+            "name": "organizationId",
+            "in": "query",
+            "description": "Organization ID (required if userId is not provided)",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "User ID (required if organizationId is not provided)",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Projects retrieved or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ProjectsResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Project Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Create Project API",
+        "description": "Use this API to create a new project",
+        "operationId": "CreateProject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProjectRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Project created or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ProjectResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/projects/{projectId}": {
+      "get": {
+        "tags": [
+          "Project Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Get Project API",
+        "description": "Use this API to get a project",
+        "operationId": "GetProject",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Project retrieved or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ProjectResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Project Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Update Project API",
+        "description": "Use this API to update a project",
+        "operationId": "UpdateProject",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProjectRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Project updated or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ProjectResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Project Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Delete Project API",
+        "description": "Use this API to delete a project",
+        "operationId": "DeleteProject",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Project deleted or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StandardResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/projects/{projectId}/managers": {
+      "get": {
+        "tags": [
+          "Project Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Get Project Managers API",
+        "description": "Use this API to get project managers",
+        "operationId": "GetProjectManagers",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Project managers retrieved or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ProjectManagersResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Project Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Update Project Manager API",
+        "description": "Use this API to update project manager role",
+        "operationId": "UpdateProjectManager",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProjectManagerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Project manager updated or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ProjectManagerResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Project Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Remove Project Manager API",
+        "description": "Use this API to remove project manager from a project",
+        "operationId": "RemoveProjectManager",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemoveProjectManagerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Project manager removed or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StandardResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/projects/{projectId}/manager/invite": {
+      "post": {
+        "tags": [
+          "Project Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Invite Project Manager API",
+        "description": "Use this API to invite a project manager",
+        "operationId": "InviteProjectManager",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InviteProjectManagerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Project manager invited or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/InviteProjectManagerResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/projects/{projectId}/manager/onboard": {
+      "post": {
+        "tags": [
+          "Project Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Onboard Project Manager API",
+        "description": "Use this API to onboard a project manager",
+        "operationId": "OnboardProjectManager",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnboardProjectManagerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Project manager onboarded or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/OnboardProjectManagerResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/projects/{projectId}/manager/decline-invitation": {
+      "post": {
+        "tags": [
+          "Project Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Decline Project Manager Invitation API",
+        "description": "Use this API to decline a project manager invitation",
+        "operationId": "DeclineProjectManagerInvitation",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeclineProjectManagerInvitationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Project manager invitation declined or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/DeclineProjectManagerInvitationResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/projects/{project_id}/applications": {
+      "get": {
+        "tags": [
+          "Application Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Get Applications API",
+        "description": "Use this API to get all applications for a project",
+        "operationId": "GetApplications",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Applications retrieved or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ApplicationsResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Application Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Create Application API",
+        "description": "Use this API to create an application",
+        "operationId": "CreateApplication",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateApplicationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Application created or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ApplicationResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/projects/{project_id}/applications/{application_id}": {
+      "get": {
+        "tags": [
+          "Application Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Get Application API",
+        "description": "Use this API to get an application",
+        "operationId": "GetApplication",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "application_id",
+            "in": "path",
+            "description": "Application ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Application retrieved or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ApplicationResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Application Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Update Application API",
+        "description": "Use this API to update an application",
+        "operationId": "UpdateApplication",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "application_id",
+            "in": "path",
+            "description": "Application ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateApplicationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Application updated or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ApplicationResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Application Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Delete Application API",
+        "description": "Use this API to delete an application",
+        "operationId": "DeleteApplication",
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "description": "Project ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "application_id",
+            "in": "path",
+            "description": "Application ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Application deleted or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/applications/{application_id}/metadata": {
+      "put": {
+        "tags": [
+          "Application Management"
+        ],
+        "summary": "Update Application Metadata API",
+        "description": "Use this API to update an application metadata",
+        "operationId": "UpdateApplicationMetadata",
+        "parameters": [
+          {
+            "name": "application_id",
+            "in": "path",
+            "description": "Application ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateApplicationMetadataRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Application metadata updated or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ApplicationResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/organization/{orgId}": {
+      "get": {
+        "tags": [
+          "Organization Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Get Organization API",
+        "description": "Use this API to get organization details",
+        "operationId": "GetOrganization",
+        "parameters": [
+          {
+            "name": "orgId",
+            "in": "path",
+            "description": "Organization ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Organization details or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/OrganizationResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Organization Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Update Organization API",
+        "description": "Use this API to update organization details",
+        "operationId": "UpdateOrganization",
+        "parameters": [
+          {
+            "name": "orgId",
+            "in": "path",
+            "description": "Organization ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOrganizationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Organization details updated or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/OrganizationResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/organization/{orgId}/managers": {
+      "get": {
+        "tags": [
+          "Organization Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Get Organization Managers API",
+        "description": "Use this API to get organization managers",
+        "operationId": "GetOrganizationManagers",
+        "parameters": [
+          {
+            "name": "orgId",
+            "in": "path",
+            "description": "Organization ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Organization managers or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/OrganizationManagersResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Organization Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Update Organization Managers API",
+        "description": "Use this API to update organization managers role",
+        "operationId": "UpdateOrganizationManager",
+        "parameters": [
+          {
+            "name": "orgId",
+            "in": "path",
+            "description": "Organization ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOrganizationManagerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Organization manager role updated or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/UpdateOrganizationManagerResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Organization Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Remove Organization Managers API",
+        "description": "Use this API to remove organization managers",
+        "operationId": "RemoveOrganizationManagers",
+        "parameters": [
+          {
+            "name": "orgId",
+            "in": "path",
+            "description": "Organization ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "manager_id",
+            "in": "query",
+            "description": "User ID of the manager to be removed",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Organization manager removed or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StandardResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/organization/{orgId}/managers/invite": {
+      "post": {
+        "tags": [
+          "Organization Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Invite Organization Managers API",
+        "description": "Use this API to invite organization managers",
+        "operationId": "InviteOrganizationManager",
+        "parameters": [
+          {
+            "name": "orgId",
+            "in": "path",
+            "description": "Organization ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InviteOrganizationManagerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Organization manager invited or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/InviteOrganizationManagerResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/organization/{orgId}/managers/onboard": {
+      "post": {
+        "tags": [
+          "Organization Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Onboard Organization Managers API",
+        "description": "Use this API to onboard organization managers (call when user accepts the invitation)",
+        "operationId": "OnboardOrganizationManager",
+        "parameters": [
+          {
+            "name": "orgId",
+            "in": "path",
+            "description": "Organization ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OnboardOrganizationManagerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Organization manager onboarded or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/OnboardOrganizationManagerResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/organization/{orgId}/managers/decline-invitation": {
+      "post": {
+        "tags": [
+          "Organization Management"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "summary": "Decline Organization Managers Invitation API",
+        "description": "Use this API to decline organization managers invitation (call when user declines the invitation)",
+        "operationId": "DeclineManagerInvitation",
+        "parameters": [
+          {
+            "name": "orgId",
+            "in": "path",
+            "description": "Organization ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeclineOrganizationManagerInvitationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Organization details updated or some error occurred, see response body for details (code and message fields)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/DeclineOrganizationManagerInvitationResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/StandardResponse"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Role": {
+        "type": "string",
+        "description": "Manager Role",
+        "enum": [
+          "ADMIN",
+          "VIEWER",
+          "MANAGER"
+        ]
+      },
+      "Type": {
+        "type": "string",
+        "description": "Project Type",
+        "enum": [
+          "STANDARD"
+        ]
+      },
+      "Status": {
+        "type": "string",
+        "description": "Status of the user",
+        "enum": [
+          "ACTIVE",
+          "INACTIVE"
+        ]
+      },
+      "InviteStatus": {
+        "type": "string",
+        "description": "Invitation Status",
+        "enum": [
+          "ACCEPTED",
+          "PENDING",
+          "INVITED",
+          "DENIED"
+        ]
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "sub": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "settings": {
+            "type": "object"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "last_updated_at": {
+            "type": "string"
+          }
+        },
+        "description": "User profile details"
+      },
+      "Project": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "org_id": {
+            "type": "string"
+          },
+          "org_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Type"
+          },
+          "tags": {
+            "type": "object"
+          },
+          "settings": {
+            "type": "object"
+          },
+          "artifact_location": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "last_updated_at": {
+            "type": "string"
+          }
+        },
+        "description": "Project details"
+      },
+      "Application": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "project_id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "inference_url": {
+            "type": "string"
+          },
+          "versions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "environments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "last_updated_at": {
+            "type": "string"
+          }
+        },
+        "description": "Application details"
+      },
+      "Organization": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "user_id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "last_updated_at": {
+            "type": "string"
+          }
+        },
+        "description": "Organization details"
+      },
+      "ProjectManager": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "project_id": {
+            "type": "string"
+          },
+          "user_id": {
+            "type": "string"
+          },
+          "role": {
+            "$ref": "#/components/schemas/Role"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "user_org_id": {
+            "type": "string"
+          },
+          "user_org_name": {
+            "type": "string"
+          },
+          "joined_at": {
+            "type": "string"
+          }
+        },
+        "description": "Project manager details"
+      },
+      "ProjectManager2": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "project_id": {
+            "type": "string"
+          },
+          "user_id": {
+            "type": "string"
+          },
+          "role": {
+            "$ref": "#/components/schemas/Role"
+          },
+          "invite_status": {
+            "$ref": "#/components/schemas/InviteStatus"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "last_updated_at": {
+            "type": "string"
+          }
+        },
+        "description": "Project manager details"
+      },
+      "OrganizationManager": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "org_id": {
+            "type": "string"
+          },
+          "user_id": {
+            "type": "string"
+          },
+          "role": {
+            "$ref": "#/components/schemas/Role"
+          },
+          "invite_status": {
+            "$ref": "#/components/schemas/InviteStatus"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "last_updated_at": {
+            "type": "string"
+          }
+        }
+      },
+      "HealthResponse": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string"
+          }
+        }
+      },
+      "StandardResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "UserResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "user": {
+                "$ref": "#/components/schemas/User"
+              },
+              "organization": {
+                "$ref": "#/components/schemas/Organization"
+              }
+            }
+          }
+        }
+      },
+      "CreateUserRequest": {
+        "type": "object",
+        "required": [
+          "sub",
+          "name",
+          "email"
+        ],
+        "properties": {
+          "sub": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": "string"
+          }
+        }
+      },
+      "UpdateUserRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": "string"
+          }
+        }
+      },
+      "UpdateSettingsRequest": {
+        "type": "object",
+        "properties": {
+          "settings": {
+            "type": "object"
+          }
+        }
+      },
+      "DeleteSettingsRequest": {
+        "type": "object",
+        "properties": {
+          "settings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ProjectResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "project": {
+                "$ref": "#/components/schemas/Project"
+              }
+            }
+          }
+        }
+      },
+      "ProjectsResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "projects": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Project"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ProjectManagerResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "manager": {
+                "$ref": "#/components/schemas/ProjectManager"
+              }
+            }
+          }
+        }
+      },
+      "ProjectManagersResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "managers": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ProjectManager"
+                }
+              }
+            }
+          }
+        }
+      },
+      "CreateProjectRequest": {
+        "type": "object",
+        "required": [
+          "name",
+          "org_id",
+          "user_id",
+          "description"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "org_id": {
+            "type": "string"
+          },
+          "user_id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "UpdateProjectRequest": {
+        "type": "object",
+        "required": [
+          "user_id"
+        ],
+        "properties": {
+          "user_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "UpdateProjectManagerRequest": {
+        "type": "object",
+        "required": [
+          "user_id",
+          "manager_id",
+          "role"
+        ],
+        "properties": {
+          "user_id": {
+            "type": "string"
+          },
+          "manager_id": {
+            "type": "string"
+          },
+          "role": {
+            "$ref": "#/components/schemas/Role"
+          }
+        }
+      },
+      "RemoveProjectManagerRequest": {
+        "type": "object",
+        "required": [
+          "user_id",
+          "manager_id"
+        ],
+        "properties": {
+          "user_id": {
+            "type": "string"
+          },
+          "manager_id": {
+            "type": "string"
+          }
+        }
+      },
+      "ApplicationResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "application": {
+                "$ref": "#/components/schemas/Application"
+              }
+            }
+          }
+        }
+      },
+      "ApplicationsResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "applications": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Application"
+                }
+              }
+            }
+          }
+        }
+      },
+      "CreateApplicationRequest": {
+        "type": "object",
+        "required": [
+          "name",
+          "description",
+          "inference_url"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "inference_url": {
+            "type": "string"
+          }
+        }
+      },
+      "UpdateApplicationRequest": {
+        "type": "object",
+        "required": [
+          "name",
+          "description",
+          "inference_url"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "inference_url": {
+            "type": "string"
+          }
+        }
+      },
+      "UpdateApplicationMetadataRequest": {
+        "type": "object",
+        "required": [
+          "application_version",
+          "application_environment"
+        ],
+        "properties": {
+          "application_version": {
+            "type": "string"
+          },
+          "application_environment": {
+            "type": "string"
+          }
+        }
+      },
+      "OrganizationResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "organization": {
+                "$ref": "#/components/schemas/Organization"
+              }
+            }
+          }
+        }
+      },
+      "GetOrganizationsResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "organization": {
+                "type": "object",
+                "properties": {
+                  "org_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "role": {
+                    "$ref": "#/components/schemas/Role"
+                  },
+                  "joined_at": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "UpdateOrganizationRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "OrganizationManagersResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "managers": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "description": "Organization manager details",
+                  "properties": {
+                    "org_id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "role": {
+                      "$ref": "#/components/schemas/Role"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "last_updated_at": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "UpdateOrganizationManagerRequest": {
+        "type": "object",
+        "properties": {
+          "manager_id": {
+            "type": "string"
+          },
+          "role": {
+            "$ref": "#/components/schemas/Role"
+          }
+        }
+      },
+      "UpdateOrganizationManagerResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "manager": {
+                "type": "object",
+                "properties": {
+                  "org_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "role": {
+                    "$ref": "#/components/schemas/Role"
+                  },
+                  "created_at": {
+                    "type": "string"
+                  },
+                  "last_updated_at": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "InviteProjectManagerRequest": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string"
+          },
+          "role": {
+            "$ref": "#/components/schemas/Role"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          }
+        }
+      },
+      "InviteProjectManagerResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "manager": {
+                "$ref": "#/components/schemas/ProjectManager2"
+              }
+            }
+          }
+        }
+      },
+      "InviteOrganizationManagerRequest": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "$ref": "#/components/schemas/Role"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          }
+        }
+      },
+      "InviteOrganizationManagerResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "manager": {
+                "$ref": "#/components/schemas/OrganizationManager"
+              }
+            }
+          }
+        }
+      },
+      "OnboardProjectManagerRequest": {
+        "type": "object",
+        "properties": {
+          "manager_id": {
+            "type": "string",
+            "description": "user id of the manager"
+          },
+          "manager_email": {
+            "type": "string",
+            "description": "email of the manager"
+          }
+        }
+      },
+      "OnboardProjectManagerResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "manager": {
+                "$ref": "#/components/schemas/ProjectManager2"
+              }
+            }
+          }
+        }
+      },
+      "OnboardOrganizationManagerRequest": {
+        "type": "object",
+        "properties": {
+          "manager_id": {
+            "type": "string",
+            "description": "user id of the manager"
+          },
+          "manager_email": {
+            "type": "string",
+            "description": "email of the manager"
+          }
+        }
+      },
+      "OnboardOrganizationManagerResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "manager": {
+                "$ref": "#/components/schemas/OrganizationManager"
+              }
+            }
+          }
+        }
+      },
+      "DeclineProjectManagerInvitationRequest": {
+        "type": "object",
+        "properties": {
+          "manager_email": {
+            "type": "string",
+            "description": "email of the manager"
+          }
+        }
+      },
+      "DeclineProjectManagerInvitationResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "manager": {
+                "$ref": "#/components/schemas/ProjectManager2"
+              }
+            }
+          }
+        }
+      },
+      "DeclineOrganizationManagerInvitationRequest": {
+        "type": "object",
+        "properties": {
+          "manager_email": {
+            "type": "string",
+            "description": "email of the manager"
+          }
+        }
+      },
+      "DeclineOrganizationManagerInvitationResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "description": "HTTP status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "message"
+          },
+          "response": {
+            "type": "object",
+            "description": "original response object",
+            "properties": {
+              "manager": {
+                "$ref": "#/components/schemas/OrganizationManager"
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "name": "Authorization",
+        "in": "header",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
