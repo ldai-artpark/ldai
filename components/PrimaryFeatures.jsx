@@ -23,7 +23,7 @@ const data = {
 const features = [
   {
     title: 'Total Files',
-    value: "59,08598",
+    value: "59,08,598",
     description:
         "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
     logo: screenshotPayroll,
@@ -143,9 +143,9 @@ export function PrimaryFeatures() {
                             >
                               <h3>
                                 <Tab
-                                    className={'font-display text-lg text-blue-100 hover:text-white lg:text-white'}
+                                    className={'font-display text-sm sm:text-lg text-blue-100 hover:text-white lg:text-white'}
                                 >
-                                  <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
+                                  <span className="absolute  inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
                                   {feature.title}
                                 </Tab>
                               </h3>

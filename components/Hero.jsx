@@ -14,22 +14,19 @@ import BhasniLogo from '../assets/bhashini.png';
 const GoogleComponent = () => {
     return (
         <>
-               <span className={'md:-mt-5 text-xs font-thin text-slate-900 ml-16 md:ml-32'}>Supported by</span>
-               <Image
-                   style={{width:"200px"}}
-                   src={GoogleLogo} alt="Google Logo" />
-
+            <span className={'md:-mt-5 text-xs font-thin text-slate-900 ml-16 md:ml-32'}>Supported by</span>
+            <Image
+                style={{width:"200px"}}
+                src={GoogleLogo} alt="Google Logo" />
         </>
     );
 };
 
-
 const Logo =[
-    {name:"",logo:IIScLogo, props: "h-10 w-12"},
-    {name:"",logo:ArtparkLogo , props: "h-10 w-30"},
-    {name:"Supported by",logo:GoogleLogo, props: "w-24"},
-    {name:" Support of",logo:BhasniLogo, props: "w-12"}
-
+    {name:"",logo:IIScLogo, props: " w-24"},
+    {name:"",logo:ArtparkLogo , props: "h-auto w-64"},
+    {name:"Supported by",logo:GoogleLogo, props: "w-auto h-12 "},
+    {name:" Support of",logo:BhasniLogo, props: "h-20 w-auto "}
 ]
 
 
@@ -39,7 +36,7 @@ const IiscComponent = () => {
 
 const ArtparkComponent = () => {
     return <Image
-        style={{width:"200px"}} className={"-mt-2"} src={ArtparkLogo} alt="Artpark Logo" />;
+        className={"h-auto w-64"} src={ArtparkLogo} alt="Artpark Logo" />;
 };
 // const ArtparkComponent = () => {
 //     return (
@@ -53,9 +50,9 @@ const ArtparkComponent = () => {
 const BhasniComponent = () => {
     return (
         <>
-            <span className={'-mt-5 text-xs font-thin text-slate-900'}></span>
+            <span className={'-mt-5 text-xs font-thin text-slate-900'}>support of </span>
             <div className={"flex justify-end"}>
-                <Image className="w-16 h-16 md:w-18 md:h-16 " src={BhasniLogo} alt="Bhasni Logo" />
+                <Image className="w-16 h-16 md:w-18 md:h-24 md:w-auto " src={BhasniLogo} alt="Bhasni Logo" />
             </div>
         </>
     )
@@ -116,25 +113,19 @@ export function Hero() {
                 </ul>
             </div>
 
-        {/*--------- for Mobile Screen--------------*/}
-            <div className="mt-36 lg:mt-44 sm:hidden block">
-                <div className={"flex gap-4 justify-between items-center"}>
-                    {
-                        Logo.map((company) => (
+            {/*--------- for Mobile Screen--------------*/}
 
-                            <div className={"relative"}
-                                    key={company.name}
-                            >
-                                <div className={'absolute -top-10 w-full'} >
-                                    <span className={"text-xs font-thin text-slate-900"} style={{fontSize: "0.5rem"}}>{company.name}</span>
-                                </div>
-                                <Image className={` ${company.props}`} src={company.logo} alt={company.name} />
-                            </div>
-
-                        ))
-                    }
+            <div className="mt-36  sm:hidden  mr-8">
+                <div className="grid grid-cols-2 gap-4 justify-between items-center bg-slate-50">
+                    {Logo.map((company) => (
+                        <div className="relative flex flex-col gap-2 items-center justify-center" key={company.name}>
+                            <span className="text-xs font-semibold text-zinc-900 ml-16 " style={{ fontSize: "0.5rem" }}>{company.name}</span>
+                            <Image className={` ${company.props} invert-[.12]`} src={company.logo} alt={company.name}  />
+                        </div>
+                    ))}
                 </div>
             </div>
+
         </Container>
     )
 }
