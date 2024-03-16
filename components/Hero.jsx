@@ -10,6 +10,7 @@ import GoogleLogo from '../assets/GoogleLogo.png';
 import ArtparkLogo from "../assets/ARTPARK.png";
 import NewronLogo from '../assets/newron-logo2x.png';
 import BhasniLogo from '../assets/bhashini.png';
+import Link from "next/link";
 
 const GoogleComponent = () => {
     return (
@@ -31,12 +32,12 @@ const Logo =[
 
 
 const IiscComponent = () => {
-    return <Image className="w-20 h-20 md:w-20 md:h-20-mt-2" src={IIScLogo} alt="IISc Logo" />;
+    return <Link href={'https://www.iisc.ac.in/'}> <Image className="w-20 h-20 md:w-20 md:h-20-mt-2" src={IIScLogo} alt="IISc Logo" /></Link>;
 };
 
 const ArtparkComponent = () => {
-    return <Image
-        className={"h-auto w-64"} src={ArtparkLogo} alt="Artpark Logo" />;
+    return <Link href={'https://www.artpark.in/'}><Image
+        className={"h-auto w-64"} src={ArtparkLogo} alt="Artpark Logo" />;</Link>;
 };
 // const ArtparkComponent = () => {
 //     return (

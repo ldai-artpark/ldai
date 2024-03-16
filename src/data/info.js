@@ -100,7 +100,7 @@ export const statewisedata =
 
 export const districtwisedata = [
     {
-        "District": "Anantapur",
+        "District": "Anantpur",
         "Duration": "159.8",
         "SpeakerCount": 968,
         "state": "Andhra Pradesh",
@@ -149,7 +149,7 @@ export const districtwisedata = [
         "transcription_duration": 1.708775833
     },
     {
-        "District": "Ballari",
+        "District": "Bellary",
         "Duration": "158.99",
         "SpeakerCount": 1014,
         "state": "Karnataka",
@@ -184,7 +184,7 @@ export const districtwisedata = [
         "transcription_duration": 2.513440278
     },
     {
-        "District": "Chamarajanagara",
+        "District": "Chamrajnagar",
         "Duration": "125.72",
         "SpeakerCount": 791,
         "state": "Karnataka",
@@ -212,14 +212,14 @@ export const districtwisedata = [
         "transcription_duration": 0.801005833
     },
     {
-        "District": "Dakshin Dinajpur",
+        "District": "DakshinDinajpur",
         "Duration": "152.5",
         "SpeakerCount": 908,
         "state": "West Bengal",
         "transcription_duration": 2.346348889
     },
     {
-        "District": "Dakshina Kannada",
+        "District":"DakshinKannada",
         "Duration": "93.74",
         "SpeakerCount": 601,
         "state": "Karnataka",
@@ -366,7 +366,7 @@ export const districtwisedata = [
         "transcription_duration": 0.044411389
     },
     {
-        "District": "Jyotiba Phule Nagar",
+        "District": "JyotibaPhuleNagar",
         "Duration": "125.04",
         "SpeakerCount": 770,
         "state": "Uttar Pradesh",
@@ -479,21 +479,21 @@ export const districtwisedata = [
         "transcription_duration": 1.326838889
     },
     {
-        "District": "North 24 Parganas",
+        "District": "North24Parganas",
         "Duration": "180.04",
         "SpeakerCount": 1056,
         "state": "West Bengal",
         "transcription_duration": 1.920838333
     },
     {
-        "District": "North South Goa",
+        "District": "NorthSouthGoa",
         "Duration": "116.15",
         "SpeakerCount": 712,
         "state": "Goa",
         "transcription_duration": 2.214575833
     },
     {
-        "District": "Paschim Medinipur",
+        "District": "PaschimMedinipur",
         "Duration": "122.53",
         "SpeakerCount": 790,
         "state": "West Bengal",
@@ -549,7 +549,7 @@ export const districtwisedata = [
         "transcription_duration": 0.880535278
     },
     {
-        "District": "Sahibganj",
+        "District": "Sahebganj",
         "Duration": "129.05",
         "SpeakerCount": 806,
         "state": "Jharkhand",
@@ -577,14 +577,14 @@ export const districtwisedata = [
         "transcription_duration": 0.6410025
     },
     {
-        "District": "Shivamogga",
+        "District": "Shimoga",
         "Duration": "122.54",
         "SpeakerCount": 828,
         "state": "Karnataka",
         "transcription_duration": 2.521591944
     },
     {
-        "District": "Sindhudurg",
+        "District": "Sindhudurga",
         "Duration": "107.08",
         "SpeakerCount": 651,
         "state": "Maharashtra",
@@ -654,7 +654,8 @@ export const districtwisedata = [
         "transcription_duration": 1.759169167
     },
     {
-        "District": "Visakhapatnam",
+        "District": "Vishakapattanam",
+        // "alternateNames":["Vizag"],
         "Duration": "112.61",
         "SpeakerCount": 658,
         "state": "Andhra Pradesh",
@@ -663,7 +664,7 @@ export const districtwisedata = [
 ];
 
 
-const transcriptiondata =[
+export const transcriptiondata =[
     {"district": "Anantpur", "duration": 1.340131667},
     {"district": "Araria", "duration": 0.870020833},
     {"district": "Aurangabad", "duration": 1.262968333},

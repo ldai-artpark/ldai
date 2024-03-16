@@ -5,9 +5,12 @@ export const mapTranslations = {
         projectionScale: 800
     },
     "bihar": {
-        projectionTranslation: [0.2, 2.6],
+        // projectionTranslation: [0.2, 2.6],
+        // projectionRotation:[-83, 0, 0],
+        // projectionScale: 2500
+        projectionTranslation: [0.4, 3],
         projectionRotation:[-83, 0, 0],
-        projectionScale: 2500
+        projectionScale: 3000
     },
     "andamannicobarislands": {
         projectionTranslation: [0.0, 0.9],
@@ -90,9 +93,12 @@ export const mapTranslations = {
         projectionScale: 2200
     },
     "maharashtra": {
-        projectionTranslation: [0.95, 2.05],
-        projectionRotation: [-83, 0, 0],
-        projectionScale: 2500
+        // projectionTranslation: [0.95, 2.05],
+        // projectionRotation: [-83, 0, 0],
+        // projectionScale: 2500
+        projectionTranslation: [.9, 2.4],
+        projectionRotation: [-80, 0, 0],
+        projectionScale: 3000
     },
     "manipur": {
         projectionTranslation: [-0.9, 3.5],
@@ -155,9 +161,12 @@ export const mapTranslations = {
         projectionScale: 3500
     },
     "uttarpradesh": {
-        projectionTranslation: [0.67, 3.4],
+        // projectionTranslation: [0.67, 3.4],
+        // projectionRotation: [-83, 0, 0],
+        // projectionScale: 3000
+        projectionTranslation: [.7, 3],
         projectionRotation: [-83, 0, 0],
-        projectionScale: 3000
+        projectionScale: 2500
     },
     "westbengal": {
         projectionTranslation: [-0.2, 3.3],

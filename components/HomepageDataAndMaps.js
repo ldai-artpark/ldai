@@ -7,8 +7,6 @@ import useBreakpoint from "../hooks/useBreakpoint";
 import {feature} from "topojson-client";
 import Model from "../components/Model"
 import {ArrowLeftIcon} from "@heroicons/react/solid";
-
-
 const HomepageDataAndMaps = ({ data }) => {
 
     const [breakpoint] = useBreakpoint();
@@ -59,10 +57,12 @@ const HomepageDataAndMaps = ({ data }) => {
         setPopup(true)
     }
 
+    console.log(districtWiseData, "districtWiseData------------222222222")
+
     return (
         <>
 
-            <section className="w-full">
+            <section className="w-full ">
                 {popup && (<Model districtName={districtName} setPopup={setPopup} />)}
                 <div className="pt-5 flex flex-col gap-4 justify-center md:grid md:grid-cols-2 md:gap-4 md:p-10 text-zinc-900">
                     <div className="overflow-x-auto  pb-5">
@@ -70,19 +70,19 @@ const HomepageDataAndMaps = ({ data }) => {
                         <table className="table table-compact md:w-full">
                             <thead>
                             <tr>
-                                {dataLevel === "states" && (<th className=" pl-4 ">States</th>)}
+                                {dataLevel === "states" && (<th className=" pl-4 ">States </th>)}
                                 {dataLevel === "districts" && (
                                     <th className=" pl-4 flex items-center">
                                         <button onClick={() => handleBacktoState()} className="mr-2">
                                             <ArrowLeftIcon className="h-5 w-5 text-indigo-700 text-bold"/>
                                         </button>
-                                        <span className=" hover:font-semibold ">{state}</span>
+                                        <span className=" hover:font-semibold py-3 ">{state}</span>
                                     </th>
                                 )}
-                                <th className="">Record Duration(hrs)</th>
-                                <th className="">Speaker Count</th>
-                                {dataLevel ==="states" && (<th>Transcription Duration (Hrs)</th>)}
-                                {dataLevel === "districts" && (<th>Transcription Duration (Hrs)</th>)}
+                                <th className="">Record <br/>  Duration(hrs)</th>
+                                <th className="">Speaker <br/>  Count</th>
+                                {dataLevel ==="states" && (<th>Transcription <br/> Duration (Hrs)</th>)}
+                                {dataLevel === "districts" && (<th>Transcription <br/>   Duration (Hrs)</th>)}
                             </tr>
                             </thead>
                             <tbody>
@@ -145,8 +145,6 @@ const HomepageDataAndMaps = ({ data }) => {
                                         </>
                                     )}
                                 />
-
-
                             ) : (
                                 <Choropleth
                                     className="w-full h-full "
@@ -205,3 +203,4 @@ const HomepageDataAndMaps = ({ data }) => {
 };
 
 export default HomepageDataAndMaps;
+

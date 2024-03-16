@@ -45,7 +45,7 @@ function Bio() {
                     />
                   </div>
                   <div className="px-4 py-6 sm:px-10 sm:py-6 md:py-2 lg:px-20 lg:py-6">
-                      <p className={clsx("font-display text-4xl font-extrabold tracking-tight text-blue-900/90 sm:text-3xl text-left md:text-left", {"md:text-left": item.reverse, "md:text-right": !item.reverse})}>
+                      <p className={clsx("font-display text-2xl md:text-4xl font-extrabold tracking-tight text-blue-900/90 sm:text-3xl text-left md:text-left", {"md:text-left": item.reverse, "md:text-right": !item.reverse})}>
                           <span className="block ">{item.name}</span>
                       </p>
                       <p className={clsx("font-display text-lg font-extrabold tracking-tight text-zinc-700  sm:text-lg",{"md:text-left md:pr-64": item.reverse, "md:text-right": !item.reverse, })}>

@@ -123,7 +123,7 @@ export default function Model({districtName,setPopup}) {
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                {languages.map((language) => (
+                                                {languages?.map((language) => (
                                                     <tr key={language}>
                                                         <td className="border px-1 md:px-4 py-1 text-xs text-zinc-600 md:text-sm ">{language}</td>
                                                         <td className="border px-2 py-1" >
@@ -132,7 +132,7 @@ export default function Model({districtName,setPopup}) {
                                                                     <button
                                                                         onClick={(e) => {
                                                                             e.preventDefault();
-                                                                            setLink(data[language]["male"][getRandomNumber(data[language]["male"].length)].link)
+                                                                            setLink(data[language]["male"][getRandomNumber(data[language]["male"].length)]?.link)
                                                                         }}
                                                                         className="rounded  bg-indigo-600 px-2 py-1 text-xs md:text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                                                         Play Video
@@ -155,7 +155,7 @@ export default function Model({districtName,setPopup}) {
                                                                         Play Video
                                                                     </button>
                                                                 ) : (
-                                                                    <span className={"text-xs text-zinc-600 sm:text-sm"}>data not available</span>
+                                                                    <span className={"text-xs text-zinc-600 sm:text-sm"}>No Speaker Found Yet</span>
                                                                 )
                                                             }
                                                         </td>

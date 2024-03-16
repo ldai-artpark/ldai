@@ -10,51 +10,16 @@ const faqs = [
       answer:
         `Capturing India's diverse language landscape is vital for an inclusive Digital India, as only 10% of the population speaks English. Existing language AI models may not meet the linguistic diversity of India, where languages blend continuously. Initiatives like the National Language Translation Mission and Project Vaani aim to collect authentic language data, addressing the limitations of biased language models.`,
     },
-    // {
-    //   question: 'Can I pay for my subscription via purchase order?',
-    //   answer: 'Absolutely, we are happy to take your money in all forms.',
-    // },
-    // {
-    //   question: 'How do I apply for a job at TaxPal?',
-    //   answer:
-    //     'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
-    // },
-  ],
-  // [
-  //   {
-  //     question: 'What was that testimonial about tax fraud all about?',
-  //     answer:
-  //       'TaxPal is just a software application, ultimately your books are your responsibility.',
-  //   },
-  //   {
-  //     question:
-  //       'TaxPal sounds horrible but why do I still feel compelled to purchase?',
-  //     answer:
-  //       'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
-  //   },
-  //   {
-  //     question:
-  //       'I found other companies called TaxPal, are you sure you can use this name?',
-  //     answer:
-  //       'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
-  //   },
-  // ],
-  // [
-  //   {
-  //     question: 'How do you generate reports?',
-  //     answer:
-  //       'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
-  //   },
-  //   {
-  //     question: 'Can we expect more inventory features?',
-  //     answer: 'In life it’s really better to never expect anything at all.',
-  //   },
-  //   {
-  //     question: 'I lost my password, how do I get into my account?',
-  //     answer:
-  //       'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
-  //   },
-  // ],
+    {
+      question:'Why is this data shown per district and not per language? ',
+      answer:
+      "We believe that language in India is more like a fabric, with the color changing gradually as we move over a fabric. Similarly, language changes as we move every few kilometers. With this school of thought, we are collecting dataset that is representative of each district, which may contain multiple languages. Click on State>District to see which languages we have recorded till date"
+    },
+    {
+      question:'Who can use this data? ',
+      answer:'This dataset is open source and can be used by any individual or organization. Any startup is welcome to use this dataset. Feedback on the dataset is always welcome Comment end '
+    }
+    ],
 ]
 
 export function Faqs() {
@@ -84,25 +49,17 @@ export function Faqs() {
             If you can’t find what you’re looking for, Email us, We will get back to you.
           </p>
         </div>
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3"
-        >
-          {faqs.map((column, columnIndex) => (
-            <li key={columnIndex}>
-              <ul role="list" className="flex flex-col gap-y-8">
-                {column.map((faq, faqIndex) => (
-                  <li key={faqIndex}>
-                    <h3 className="font-display text-lg leading-7 text-slate-900">
-                      {faq.question}
-                    </h3>
-                    <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
-                  </li>
-                ))}
-              </ul>
-            </li>
+
+        <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 mt-12'}>
+          {faqs[0].map((faq, index) => (
+              <div key={index} className="md:col-span-1 lg:col-span-1">
+                <h3 className="font-display text-lg leading-7 text-slate-900 mt-4">
+                  {faq.question}
+                </h3>
+                <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
+              </div>
           ))}
-        </ul>
+        </div>
       </Container>
     </section>
   )

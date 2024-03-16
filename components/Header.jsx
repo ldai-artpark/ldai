@@ -54,8 +54,8 @@ function Logo1(){
   return(
       <>
         <div className={"flex gap-6 bg-slate-60"}>
-          <Image className="w-12 h-12 " src={IIScLogo} alt="IISc Logo" />
-          <Image className={'h-auto w-64'} src={ArtparkLogo} alt="Artpark Logo" />
+          <Link href={'https://www.iisc.ac.in/'} ><Image className="w-12 h-12 " src={IIScLogo} alt="IISc Logo" /></Link>
+          <Link href={'https://artpark.in/'} ><Image className={'h-auto w-64'} src={ArtparkLogo} alt="Artpark Logo" /></Link>
         </div>
       </>
   )
