@@ -37,7 +37,7 @@ const IiscComponent = () => {
 
 const ArtparkComponent = () => {
     return <Link href={'https://www.artpark.in/'}><Image
-        className={"h-auto w-64"} src={ArtparkLogo} alt="Artpark Logo" />;</Link>;
+        className={"h-auto w-64"} src={ArtparkLogo} alt="Artpark Logo" /></Link>
 };
 // const ArtparkComponent = () => {
 //     return (
