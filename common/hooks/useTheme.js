@@ -12,7 +12,6 @@ const useTheme = ({autoThemeChangeDetect } = {autoThemeChangeDetect:true}) => {
             setCurrentTheme("dark");
         }
     }
-    console.log("currentTheme", currentTheme);
 
     useEffect(() => {
 

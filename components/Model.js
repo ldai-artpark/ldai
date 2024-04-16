@@ -35,7 +35,6 @@ export default function Model({districtName,setPopup}) {
     const languages = Object.keys(data ?? {})
     const [link,setLink]=useState(data ? data[languages[0]]["male"].length > 0 ? data[languages[0]]["male"][0].link : data[0]["female"][0].link : "")
     const onPlayerReady = (player) => {
-        console.log('Player is ready:', player);
     };
 
     const options = {
@@ -65,7 +64,6 @@ export default function Model({districtName,setPopup}) {
         });
     };
 
-   console.log({link})
     return (
         <Transition.Root show={open} as={Fragment}>
             <Dialog as="div" className="relative z-40"

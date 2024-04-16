@@ -96,7 +96,6 @@ const LowResource = () => {
                                                     .map(lang => lang.district);
                                                 // setSearchDistrict(districts.join(', '));
                                                 setFilteredResource(districts);
-                                                console.log(districts, 'districts');
                                             }}
                                         />
 
@@ -125,7 +124,6 @@ const LowResource = () => {
                                     <div key={index} className="flex items-center gap-2">
                                         <input type="checkbox" className="w-4 h-4 rounded" onClick={() => {
                                            const languages = Resource.filter((lang) => lang.district === item.district);
-                                           console.log(languages, 'languages');
                                            setFilteredResource(languages);
                                         }} />
                                         <p className="text-zinc-900 text-sm">{item.district}</p>
@@ -153,7 +151,6 @@ const LowResource = () => {
                             projectionRotation={mapTranslations.india.projectionRotation}
                             projectionTranslation={mapTranslations.india.projectionTranslation}
                             onClick={e => {
-                                console.log(e);
 
                             }}
                             tooltip={e => (

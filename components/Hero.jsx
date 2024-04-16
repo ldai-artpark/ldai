@@ -36,7 +36,7 @@ const IiscComponent = () => {
 };
 
 const ArtparkComponent = () => {
-    return <Link href={'https://www.artpark.in/'}><Image
+    return <Link target='_blank' href={'https://www.artpark.in/language-data-ai'}><Image
         className={"h-auto w-64"} src={ArtparkLogo} alt="Artpark Logo" /></Link>
 };
 // const ArtparkComponent = () => {

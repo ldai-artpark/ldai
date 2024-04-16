@@ -10,7 +10,6 @@ import {ArrowLeftIcon} from "@heroicons/react/solid";
 const HomepageDataAndMaps = ({ data }) => {
 
     const [breakpoint] = useBreakpoint();
-    console.log(breakpoint,"breakpoint");
 
     // console.log({ data });
 
@@ -27,7 +26,6 @@ const HomepageDataAndMaps = ({ data }) => {
     const aggregateData = data?.aggregates?.["all"] || {};
 
     const stateWiseData = data?.stateWiseAggregates?.["all"] || {};
-    console.log(stateWiseData, "stateWiseData")
 
     const districtWiseData = useMemo(() => {
         if (!data) {
@@ -52,12 +50,9 @@ const HomepageDataAndMaps = ({ data }) => {
     };
 
     const hadleClickDistrict = (district) => {
-        console.log(district, "districtName")
         setDistrictName(district)
         setPopup(true)
     }
-
-    console.log(districtWiseData, "districtWiseData------------222222222")
 
     return (
         <>
@@ -166,7 +161,6 @@ const HomepageDataAndMaps = ({ data }) => {
                                     //     dataLevel === "states"  ? handleOnClickState(e.id) : hadleClickDistrict(e.id)
                                     // }}
                                     onClick={(e)=>{
-                                        console.log(e, "e.feature")
                                         if(e.data){
                                             dataLevel === "states"   ? handleOnClickState(e.id) : hadleClickDistrict(e.id)
                                         }

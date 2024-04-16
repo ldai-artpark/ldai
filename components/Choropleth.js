@@ -24,16 +24,27 @@ const Choropleth = memo(({
                             projectionScale=800,
                             legend = [
                                 {
-                                    anchor: 'bottom-left',
+                                    anchor: 'bottom',
                                     direction: 'column',
                                     justify: true,
-                                    translateX: 20,
-                                    translateY: -100,
+                                    translateX: -183,
+                                    translateY: -45,
                                     itemsSpacing: 0,
-                                    itemWidth: 70,
-                                    itemHeight: 18,
+                                    itemWidth: 82,
+                                    itemHeight: 24,
                                     itemDirection: 'left-to-right',
+                                    itemTextColor: '#444444',
                                     itemOpacity: 0.85,
+                                    symbolSize: 21,
+                                    effects: [
+                                        {
+                                            on: 'hover',
+                                            style: {
+                                                itemTextColor: '#000000',
+                                                itemOpacity: 1
+                                            }
+                                        }
+                                    ]
                                 }
                             ], ...rest
                          },) =>
@@ -61,6 +72,8 @@ const Choropleth = memo(({
         });
     }, [legend, legendTextColor]);
 
+    console.log("Processed",processedLegends)
+
 
 
     useEffect(() => {
@@ -87,8 +100,6 @@ const Choropleth = memo(({
         return null;
     }
 
-    console.log("features", features);
-
     return (
         <div className={"h-[240px] w-full md:h-[500px] md:w-[340px] lg:h-[500px] lg:w-[500px] text-zinc-800 choropleth"}>
             <ResponsiveChoropleth
@@ -105,7 +116,7 @@ const Choropleth = memo(({
                 graticuleLineColor={graticuleColor}
                 margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
                 colors={colors}
-                legends={enableLegend ? processedLegends : undefined}
+                legends={ processedLegends}
                 {...rest}
             />
         </div>
@@ -121,19 +132,5 @@ Choropleth.propTypes = {
     colors: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
     enableLegend: PropTypes.bool,
     domain: PropTypes.arrayOf(PropTypes.number).isRequired,
-    legend: PropTypes.arrayOf(PropTypes.shape({
-        anchor: PropTypes.oneOf(["top", "bottom", "left", "right"]),
-        direction: PropTypes.oneOf(["column", "row"]),
-        justify: PropTypes.bool,
-        translateX: PropTypes.number,
-        translateY: PropTypes.number,
-        itemsSpacing: PropTypes.number,
-        itemWidth: PropTypes.number,
-        itemHeight: PropTypes.number,
-        itemDirection: PropTypes.oneOf(["left-to-right", "right-to-left", "top-to-bottom", "bottom-to-top"]),
-        itemTextColor: PropTypes.string,
-        itemOpacity: PropTypes.number,
-    })),
-
 }
 export default Choropleth;
