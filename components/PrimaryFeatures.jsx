@@ -33,8 +33,8 @@ export function PrimaryFeatures() {
 
   useEffect(() => {
     (async function fetch() {
-      const response = await axios.get(`http://localhost:3001/api/ldai/getStats`)
-      // const response = await axios.get(`/data/api/ldai/getStats`)
+      // const response = await axios.get(`http://localhost:3001/api/ldai/getStats`)
+      const response = await axios.get(`/data/api/ldai/getStats`)
       setStats(response.data);
       setLoading(false)
     })()
