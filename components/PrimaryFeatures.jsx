@@ -33,13 +33,13 @@ export function PrimaryFeatures() {
 
   useEffect(() => {
     (async function fetch() {
-      const response = await axios.get("http://localhost:3000/api/ldai/getStats")
+      const response = await axios.get(`http://localhost:3001/api/ldai/getStats`)
+      // const response = await axios.get(`/data/api/ldai/getStats`)
       setStats(response.data);
       setLoading(false)
     })()
   })
-  // const { data, error, isLoading } = useSwr(`http://localhost:3000/api/ldai/getStats`, getFetcher)
-  // Check if data is undefined or null before accessing its properties
+
   const totalFiles = stats?.total_Files ?? ""
   const totalDuration = stats?.total_duration ?? ""
   const totalSpeakers = stats?.total_speakers ?? ""
