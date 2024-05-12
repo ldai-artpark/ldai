@@ -54,7 +54,7 @@ export async function getStaticProps() {
     // catch (error) {
     //     console.log(error)
     // }
- 
+
     const district_data = districtwisedata.map((item) => {
         return {
             id: item.District,

@@ -72,8 +72,6 @@ const Choropleth = memo(({
         });
     }, [legend, legendTextColor]);
 
-    console.log("Processed",processedLegends)
-
 
 
     useEffect(() => {
