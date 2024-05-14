@@ -39,10 +39,10 @@ export async function getStaticProps() {
 
     let url = null;
     try {
-        url = new URL(`http://127.0.0.1:3001/api/stats?data_source=${"VAANI"}`);
+        url = new URL(`https://vaani.iisc.ac.in/dataset/api/stats?data_source=${"VAANI"}`);
     }
     catch (e) {
-        url = new URL(`http://127.0.0.1:3001/api/stats?data_source=${"VAANI"}`);
+        url = new URL(`https://vaani.iisc.ac.in/dataset/api/stats?data_source=${"VAANI"}`);
     }
 
     let stats = null;
