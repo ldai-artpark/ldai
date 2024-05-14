@@ -4,13 +4,11 @@ import { useMyContext } from "../contexts/MyContext";
 import Link from "next/link";
 
 const ButtonDialog = ({ color, mt }) => {
-
+    const {popup, setPopUp} = useMyContext();
     return (
-        <Link href={'/data/vaani'}>
-            <Button color={color} className={`mt-${mt}`}>
-                Download Data
-            </Button>
-        </Link>
+        <Button color={color} className={`mt-${mt}`} onClick={() => setPopUp(true)}>
+            Download Data
+        </Button>
     );
 };
 

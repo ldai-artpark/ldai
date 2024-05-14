@@ -57,7 +57,7 @@ export async function getStaticProps() {
 
     console.log(stats);
 
-    const district_data = stats.map_data.districtwisedata.map((item) => {
+    const district_data = stats?.map_data.districtwisedata.map((item) => {
         return {
             id: item.district,
             district: item.district,
@@ -68,7 +68,7 @@ export async function getStaticProps() {
         }
     })
 
-    const state_data = stats.map_data.statewisedata.map((item) => {
+    const state_data = stats?.map_data.statewisedata.map((item) => {
         console.log(item)
         return {
             id: item.state,
@@ -80,13 +80,13 @@ export async function getStaticProps() {
 
     const data = {
         stats: {
-            total_Files: stats.total_files,
-            total_duration: stats.total_duration,
-            total_speakers: stats.total_speakers,
-            male_Speakers: stats.male_audio,
-            female_Speakers: stats.female_audio,
-            total_districts: stats.total_districts,
-            total_states: stats.total_states
+            total_Files: stats?.total_files,
+            total_duration: stats?.total_duration,
+            total_speakers: stats?.total_speakers,
+            male_Speakers: stats?.male_audio,
+            female_Speakers: stats?.female_audio,
+            total_districts: stats?.total_districts,
+            total_states: stats?.total_states
         },
         data: {
             all: district_data
