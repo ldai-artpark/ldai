@@ -39,10 +39,10 @@ export async function getStaticProps() {
 
     let url = null;
     try {
-        url = new URL(`http://localhost:3001/api/stats?data_source=${"VAANI"}`);
+        url = new URL(`http://127.0.0.1:3001/api/stats?data_source=${"VAANI"}`);
     }
     catch (e) {
-        url = new URL(`http://localhost:3001/api/stats?data_source=${"VAANI"}`);
+        url = new URL(`http://127.0.0.1:3001/api/stats?data_source=${"VAANI"}`);
     }
 
     let stats = null;
