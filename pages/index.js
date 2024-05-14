@@ -22,7 +22,7 @@ export default function Home({ data }) {
             {isClient && <Header />}
             <main>
                 <Hero />
-                <PrimaryFeatures />
+                <PrimaryFeatures stats={data.stats} />
                 <SecondaryFeatures data={data} />
                 <CallToAction />
                 <Testimonials />
@@ -36,47 +36,58 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-    //
-    // let url = null;
-    // try {
-    //     url = new URL(process.env.NEXT_PUBLIC_VERCEL_URL + "/api/v1/get-raw-data-stats");
-    // }
-    // catch (e) {
-    //     url = new URL(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/v1/get-raw-data-stats`);
-    // }
-    //
-    // let data = null;
-    //
-    // try {
-    //     let res = await fetch(url.toString());
-    //     data = await res.json();
-    // }
-    // catch (error) {
-    //     console.log(error)
-    // }
 
-    const district_data = districtwisedata.map((item) => {
+    let url = null;
+    try {
+        url = new URL(`http://localhost:3001/api/stats?data_source=${"VAANI"}`);
+    }
+    catch (e) {
+        url = new URL(`http://localhost:3001/api/stats?data_source=${"VAANI"}`);
+    }
+
+    let stats = null;
+
+    try {
+        let res = await fetch(url.toString());
+        stats = await res.json();
+    }
+    catch (error) {
+        console.log(error)
+    }
+
+    console.log(stats);
+
+    const district_data = stats.map_data.districtwisedata.map((item) => {
         return {
-            id: item.District,
-            district: item.District,
+            id: item.district,
+            district: item.district,
             state: item.state,
-            duration_per_district_hrs: item.Duration,
-            spks_per_district: item.SpeakerCount,
+            duration_per_district_hrs: item.duration_hours,
+            spks_per_district: item.speaker_count,
             transcription_duration:item.transcription_duration
         }
     })
 
-    const state_data = statewisedata.map((item) => {
+    const state_data = stats.map_data.statewisedata.map((item) => {
+        console.log(item)
         return {
-            id: item.State,
-            total_duration_hrs: Number(item.Duration),
-            total_speakers: item.SpeakerCount,
-            duration_percentage: item.DurationPercentage,
-            transcription_duration_state:item.transcription_duration_state
+            id: item.state,
+            total_duration_hrs: Number(item.duration_hours),
+            total_speakers: item.speaker_count,
+            transcription_duration_state:item.transcription_duration
         }
     })
 
     const data = {
+        stats: {
+            total_Files: stats.total_files,
+            total_duration: stats.total_duration,
+            total_speakers: stats.total_speakers,
+            male_Speakers: stats.male_audio,
+            female_Speakers: stats.female_audio,
+            total_districts: stats.total_districts,
+            total_states: stats.total_states
+        },
         data: {
             all: district_data
         },

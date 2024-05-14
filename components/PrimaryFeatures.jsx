@@ -25,20 +25,20 @@ import { set } from 'lodash'
 //   "min_Duration": "0.5s"
 // }
 
-export function PrimaryFeatures() {
+export function PrimaryFeatures({stats}) {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
-  const [stats, setStats] = useState()
-  const [loading, setLoading] = useState(true)
+  // const [stats, setStats] = useState()
+  // const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    (async function fetch() {
-      // const response = await axios.get(`http://localhost:3001/api/ldai/getStats`)
-      const response = await axios.get(`/data/api/ldai/getStats`)
-      setStats(response.data);
-      setLoading(false)
-    })()
-  })
+  // useEffect(() => {
+  //   (async function fetch() {
+  //     // const response = await axios.get(`http://localhost:3001/api/ldai/getStats`)
+  //     const response = await axios.get(`/data/api/ldai/getStats`)
+  //     setStats(response.data);
+  //     setLoading(false)
+  //   })()
+  // })
 
   const totalFiles = stats?.total_Files ?? ""
   const totalDuration = stats?.total_duration ?? ""
@@ -134,7 +134,7 @@ export function PrimaryFeatures() {
               <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
                 <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
                   <div className='grid grid-cols-2 gap-1'>
-                    {!loading && features.map((feature, featureIndex) => (
+                    {features.map((feature, featureIndex) => (
                       <div
                         key={feature.title}
                         className={clsx(
@@ -159,19 +159,6 @@ export function PrimaryFeatures() {
                         </p>
                       </div>
                     ))}
-                    {loading && (
-                      <div>
-                        <Oval
-                          visible={true}
-                          height="50"
-                          width="50"
-                          color="#00316c"
-                          ariaLabel="oval-loading"
-                          wrapperStyle={{}}
-                          wrapperClass=""
-                        />
-                      </div>
-                    )}
                   </div>
                 </Tab.List>
               </div>
