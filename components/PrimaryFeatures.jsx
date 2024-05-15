@@ -25,24 +25,27 @@ import { set } from 'lodash'
 //   "min_Duration": "0.5s"
 // }
 
-export function PrimaryFeatures({stats}) {
+function formater(num) {
+  const CurrencyFormater = new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
+  const formatString = CurrencyFormater.format(num);
+  let cleanedInput = formatString.substring(1)
+  let dotIndex = cleanedInput.indexOf('.');
+  if (dotIndex !== -1) {
+    cleanedInput = cleanedInput.slice(0, dotIndex);
+  }
+  return cleanedInput;
+}
+
+export function PrimaryFeatures({ stats }) {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
-  // const [stats, setStats] = useState()
-  // const [loading, setLoading] = useState(true)
-
-  // useEffect(() => {
-  //   (async function fetch() {
-  //     // const response = await axios.get(`http://localhost:3001/api/ldai/getStats`)
-  //     const response = await axios.get(`/data/api/ldai/getStats`)
-  //     setStats(response.data);
-  //     setLoading(false)
-  //   })()
-  // })
-
-  const totalFiles = stats?.total_Files ?? ""
+  const totalFiles = formater(stats?.total_Files) ?? ""
   const totalDuration = stats?.total_duration ?? ""
-  const totalSpeakers = stats?.total_speakers ?? ""
+  const totalSpeakers = formater(stats?.total_speakers) ?? ""
   const maleSpeakers = stats?.male_Speakers ?? ""
   const femaleSpeakers = stats?.female_Speakers ?? ""
   const totalDistricts = stats?.total_districts ?? ""
