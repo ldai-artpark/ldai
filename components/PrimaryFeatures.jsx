@@ -46,10 +46,10 @@ export function PrimaryFeatures({ stats }) {
   const totalFiles = formater(stats?.total_Files) ?? ""
   const totalDuration = stats?.total_duration ?? ""
   const totalSpeakers = formater(stats?.total_speakers) ?? ""
-  const maleSpeakers = stats?.male_Speakers ?? ""
-  const femaleSpeakers = stats?.female_Speakers ?? ""
-  const totalDistricts = stats?.total_districts ?? ""
-  const totalStates = stats?.total_states ?? ""
+  const maleSpeakers = stats?.female_Speakers ?? ""
+  const femaleSpeakers = stats?.male_Speakers ?? ""
+  const totalDistricts = stats?.total_states ?? ""
+  const totalStates = stats?.total_districts ?? ""
 
   // Create an array of features with proper data handling
   let features = [

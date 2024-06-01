@@ -97,7 +97,7 @@ const HomepageDataAndMaps = ({ data }) => {
                                     return (
                                         <tr key={elements} className="light:hover">
                                             <td className="bg-slate-50 hover:link pl-4 hover:font-semibold" onClick={() => { hadleClickDistrict(elements.id) }}>{elements.id}</td>
-                                            <td className="bg-slate-50">{elements.duration_per_district_hrs}</td>
+                                            <td className="bg-slate-50">{elements.duration_per_district_hrs.toFixed(2)}</td>
                                             <td className="bg-slate-50" >{elements.spks_per_district}</td>
                                             <td className="bg-slate-50">{parseFloat(elements.transcription_duration).toFixed(2)}</td>
                                         </tr>
