@@ -9,7 +9,7 @@ const bioData = [
         reverse: true,
         name: "Dr. Prasanta Kumar Ghosh",
         image: PrashantaImage,
-        subBio: "Assistant professor, Dept of Electrical Engineering (EE) at Indian Institute of Science (IISc), Bangalore.",
+        subBio: "Associate professor, Dept of Electrical Engineering (EE) at Indian Institute of Science (IISc), Bangalore.",
         bio: "Prasanta Kumar Ghosh received his Ph.D. in Electrical Engineering from University of Southern California (USC), Los Angeles, USA in 2011. During 2011-2012 he was with IBM India Research Lab (IRL) as a researcher. He was awarded the INSPIRE faculty fellowship from Department of Science and Technology (DST), Govt. of India in 2012. He was awarded Center of Excellence in Teaching’s award for excellence in teaching in the category of EE for the year 2010-11 in USC. His research interests are in human centered signal processing with applications to education and health care.",
     },
     {
@@ -17,7 +17,7 @@ const bioData = [
       reverse: false,
       name: "Raghu Dharmaraju",
       image: RaghuramdImage,
-      subBio: "President ARTPARK",
+      subBio: "CEO Artpark",
       bio: "He is a highly experienced innovator with over two decades of experience conceiving and scaling pioneering institutions and innovations. He has launched a portfolio of eight AI innovations, including TRACE-TB, a major national initiative. He has raised $19 million from the Gates Foundation, USAID, and Google.org and has established. Raghu has also launched and scaled award-winning med-tech innovations, including Embrace infant warmers, which have reached approximately 1,000,000 babies via WHO and non-profits, governments, and 300+ private hospitals in 100+ small towns. He has led strategy, product management, and startup operations for a new global business at Corning Environmental Technologies, and has experience in a range of industries including digital health, med-tech, agriculture, financial inclusion, circular economy, and more. Raghu holds a B.Tech. from IIT Madras, an M.S. from the University of Massachusetts, Amherst, and an M.B.A. from Cornell.",
     }
 ]
