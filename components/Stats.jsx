@@ -40,7 +40,7 @@ function formater(num) {
   return cleanedInput;
 }
 
-export function PrimaryFeatures({ stats }) {
+export function Stats({ stats }) {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
   const totalFiles = formater(stats?.total_Files) ?? ""

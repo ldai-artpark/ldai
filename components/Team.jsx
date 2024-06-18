@@ -2,7 +2,7 @@ import clsx from 'clsx'
 
 import { Button } from './Button'
 import { Container } from './Container'
-import Bio from "../components/Bio";
+import Bio from "./Bio";
 
 function SwirlyDoodle(props) {
   return (
@@ -21,7 +21,7 @@ function SwirlyDoodle(props) {
   )
 }
 
-export function Testimonials() {
+export function Team() {
   return (
     <section
       id=""

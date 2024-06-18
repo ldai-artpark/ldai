@@ -4,7 +4,7 @@ import { Container } from './Container'
 import HomepageDataAndMaps from './HomepageDataAndMaps'
 
 
-export function SecondaryFeatures({data}) {
+export function ExploreData({data}) {
   return (
     <section
       id="Data"

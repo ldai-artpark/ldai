@@ -6,7 +6,7 @@ import Model2 from "./Model2";
 import ButtonDialog from "./Button2";
 import {useMyContext} from "../contexts/MyContext";
 
-export function CallToAction() {
+export function DownloadSection() {
   const {popup} = useMyContext();
 
   return (

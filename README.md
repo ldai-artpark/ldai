@@ -1,41 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Vaani Homepage Project
 
-## Getting Started
-Install Node modules :
+This project is the homepage for the Vaani project. Below you will find instructions to set up the project and details about the main entry point of the application.
 
-```bash
-yarn
-# or
-yarn install
-```
+## Project Setup
 
-First, run the development server:
+To set up the project, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/NewronAI/ldai.git
+    cd vaani-homepage
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies:**
+    ```sh
+    yarn install
+    ```
 
-You can start editing the page by modifying `pages/_index.js`. The page auto-updates as you edit the file.
+3. **Run the development server:**
+    ```sh
+    yarn dev
+    ```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Main Entry Point
 
-## Learn More
+The main entry point of this project is the `index.js` file located in the `pages` directory.
 
-To learn more about Next.js, take a look at the following resources:
+### Overview of components used in `index.js`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Header:** Displays the header of the webpage.
+- **Hero:** The main hero section of the homepage.
+- **Stats:** Shows various statistics fetched from the API.
+- **ExploreData:** Allows users to explore data visually using the indian map.
+- **DownloadSection:** Section where user is redirected to data hosting platform.
+- **Team:** Information about the team behind the project.
+- **ArticlesSection:** Displays articles or posts.
+- **Faqs:** Frequently Asked Questions section.
+- **Footer:** The footer of the webpage.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Data Fetching
 
-## Deploy on Vercel
+The `getStaticProps` function handles data fetching from an external API endpoint and prepares it to be passed as props to the `Home` component.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Revalidation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The `getStaticProps` function revalidates the data every 600 seconds (10 minutes) to ensure the homepage displays up-to-date information.
+
+---
+
+Follow the instructions above to set up and understand the structure of the Vaani homepage project. If you encounter any issues, feel free to reach out for support.

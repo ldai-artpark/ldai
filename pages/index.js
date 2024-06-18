@@ -1,12 +1,12 @@
-import { CallToAction } from '../components/CallToAction'
+import { DownloadSection } from '../components/DownloadSection'
 import { Faqs } from '../components/Faqs'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
-import { Pricing } from '../components/Pricing'
-import { PrimaryFeatures } from '../components/PrimaryFeatures'
-import { SecondaryFeatures } from '../components/SecondaryFeatures'
-import { Testimonials } from '../components/Testimonials'
+import { ArticlesSection } from '../components/ArticlesSection'
+import { Stats } from '../components/Stats'
+import { ExploreData } from '../components/ExploreData'
+import { Team } from '../components/Team'
 import {useState,useEffect} from "react";
 import {districtwisedata, statewisedata} from "../src/data/info";
 import LowResource from "../components/LowResourse";
@@ -22,12 +22,12 @@ export default function Home({ data }) {
             {isClient && <Header />}
             <main>
                 <Hero />
-                <PrimaryFeatures stats={data.stats} />
-                <SecondaryFeatures data={data} />
-                <CallToAction />
-                <Testimonials />
+                <Stats stats={data.stats} />
+                <ExploreData data={data} />
+                <DownloadSection />
+                <Team />
                 {/*<LowResource />*/}
-                <Pricing />
+                <ArticlesSection />
                 <Faqs />
             </main>
             <Footer />

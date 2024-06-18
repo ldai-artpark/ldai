@@ -86,7 +86,7 @@ function QuoteIcon(props) {
   )
 }
 
-export function Pricing() {
+export function ArticlesSection() {
   return (
       <section
           id="Media"
