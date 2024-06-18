@@ -9,7 +9,7 @@ To set up the project, follow these steps:
 1. **Clone the repository:**
     ```sh
     git clone https://github.com/NewronAI/ldai.git
-    cd vaani-homepage
+    cd ldai
     ```
 
 2. **Install dependencies:**
@@ -50,4 +50,4 @@ The `getStaticProps` function revalidates the data every 600 seconds (10 minutes
 
 ---
 
-Follow the instructions above to set up and understand the structure of the Vaani homepage project. If you encounter any issues, feel free to reach out for support.
+Follow the instructions above to set up and understand the structure of the Vaani homepage project.
