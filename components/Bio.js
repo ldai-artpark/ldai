@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import PrashantaImage from '../assets/Prasanta_Kumar_Ghosh.jpg'
 import RaghuramdImage from '../assets/raghuramd.png'
+import NiharImage from '../assets/Nihar6.png'
 import clsx from 'clsx'
 
 const bioData = [
@@ -19,7 +20,17 @@ const bioData = [
       image: RaghuramdImage,
       subBio: "CEO Artpark",
       bio: "He is a highly experienced innovator with over two decades of experience conceiving and scaling pioneering institutions and innovations. He has launched a portfolio of eight AI innovations, including TRACE-TB, a major national initiative. He has raised $19 million from the Gates Foundation, USAID, and Google.org and has established. Raghu has also launched and scaled award-winning med-tech innovations, including Embrace infant warmers, which have reached approximately 1,000,000 babies via WHO and non-profits, governments, and 300+ private hospitals in 100+ small towns. He has led strategy, product management, and startup operations for a new global business at Corning Environmental Technologies, and has experience in a range of industries including digital health, med-tech, agriculture, financial inclusion, circular economy, and more. Raghu holds a B.Tech. from IIT Madras, an M.S. from the University of Massachusetts, Amherst, and an M.B.A. from Cornell.",
+    },
+    {
+      id: "3",
+      reverse: false,
+      name: "Nihar Desai",
+      image: NiharImage,
+      subBio: "Program Lead",
+      bio: "Nihar comes with a decade of experience spanning strategy, operations & program management. A seasoned management generalist, he has a knack for understanding technology and is passionate for its applications for creating societal impact and to extract efficiencies across value chains. Having been an entrepreneur for half a decade, he has led strategy, product and technology operations at large startups. He is adept at establishing & governing large scale operations. He finished his B.Tech from National Institute of Technology, Surat and has earned his MBA from Indian School of Business (ISB)."
     }
+
+    
 ]
 
 function Bio() {
