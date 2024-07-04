@@ -4,26 +4,10 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
-import axios from 'axios'
-import useSwr from "swr";
-
 import { Container } from './Container'
 import backgroundImage from '../images/background-features.jpg'
 import screenshotExpenses from '../images/screenshots/expenses.png'
 import screenshotPayroll from '../images/screenshots/payroll.png'
-import { getFetcher } from "../src/fetchers";
-import { Oval } from 'react-loader-spinner'
-import { set } from 'lodash'
-
-// const data = {
-//   "total_Files": 4778787,
-//   "total_duration": "9194.55hr",
-//   "male_Speakers": 2242675,
-//   "female_Speakers": 2537813,
-//   "average_Duration": "6.93s",
-//   "max_Duration": "21.449s",
-//   "min_Duration": "0.5s"
-// }
 
 function formater(num) {
   const CurrencyFormater = new Intl.NumberFormat('en-IN', {
@@ -40,65 +24,62 @@ function formater(num) {
   return cleanedInput;
 }
 
+function formatStats(stat) {
+      return stat.replace(/(\d+)([A-Za-z]+)/, '$1 $2');
+}
+
 export function Stats({ stats }) {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
 
-  const totalFiles = formater(stats?.total_Files) ?? ""
-  const totalDuration = stats?.total_duration ?? ""
-  const totalSpeakers = formater(stats?.total_speakers) ?? ""
-  const maleSpeakers = stats?.female_Speakers ?? ""
-  const femaleSpeakers = stats?.male_Speakers ?? ""
-  const totalDistricts = stats?.total_states ?? ""
-  const totalStates = stats?.total_districts ?? ""
+  const totalFiles = formater(stats?.total_Files) ?? "";
+  const totalDuration = stats?.total_duration ?? "";
+  const totalSpeakers = formater(stats?.total_speakers) ?? "";
+  const maleSpeakers = stats?.male_Speakers ?? "";
+  const femaleSpeakers = stats?.female_Speakers ?? "";
+  const totalDistricts = stats?.total_states ?? "";
+  const totalStates = stats?.total_districts ?? "";
+  const transcription_duration = stats.transcription_duration ?? "";
 
   // Create an array of features with proper data handling
   let features = [
     {
       title: 'Total Files',
       value: totalFiles,
-      description: "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
       logo: screenshotPayroll,
     },
     {
       title: 'Total Duration',
-      value: totalDuration,
-      description: "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      value: formatStats(totalDuration),
       logo: screenshotExpenses,
     },
     {
       title: 'Total Speakers',
       value: totalSpeakers,
-      description: "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
       logo: screenshotPayroll,
     },
     {
       title: 'Male Audio',
       value: maleSpeakers,
-      description: "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
       logo: screenshotExpenses,
     },
     {
       title: 'Female Audio',
       value: femaleSpeakers,
-      description: "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
       logo: screenshotExpenses,
     },
     {
       title: 'Transcription Duration',
-      value: "92.82 hrs",
-      description: "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      value: formatStats(transcription_duration),
       logo: screenshotExpenses,
     },
     {
       title: 'Districts Covered',
       value: totalDistricts,
-      description: "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
       logo: screenshotExpenses,
     },
     {
       title: 'States Covered',
       value: totalStates,
-      description: "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
       logo: screenshotExpenses,
     }
   ]

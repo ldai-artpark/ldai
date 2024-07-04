@@ -13,7 +13,8 @@ import LowResource from "../components/LowResourse";
 
 
 export default function Home({ data }) {
-    const [isClient , setIsClient] = useState(false)
+    const [isClient , setIsClient] = useState(false);
+
     useEffect(() => {
         setIsClient(true)
     }, [])
@@ -86,7 +87,8 @@ export async function getStaticProps() {
             male_Speakers: stats?.male_audio,
             female_Speakers: stats?.female_audio,
             total_districts: stats?.total_districts,
-            total_states: stats?.total_states
+            total_states: stats?.total_states,
+            transcription_duration: stats.transcription_duration
         },
         data: {
             all: district_data
