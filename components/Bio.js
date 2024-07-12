@@ -23,7 +23,7 @@ const bioData = [
     },
     {
       id: "3",
-      reverse: false,
+      reverse: true,
       name: "Nihar Desai",
       image: NiharImage,
       subBio: "Program Lead",
