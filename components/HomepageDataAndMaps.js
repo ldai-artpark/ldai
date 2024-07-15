@@ -182,7 +182,7 @@ const HomepageDataAndMaps = ({ data }) => {
                                             }
                                         }}
                                     />
-                                        <p className="flex justify-center font-medium text-sm text-gray-700">The colors on the map indicate the recorded duration in hours for each {dataLevel === 'states' ? "state." : "district."}</p>
+                                        <p className="flex justify-center font-medium text-sm text-gray-700">The colors on the map indicate the recorded duration in hours for each {dataLevel === 'states' ? "state." : "district."}."Click on the map to go deeper"</p>
                                 </div>
                             )}
                         </div>
