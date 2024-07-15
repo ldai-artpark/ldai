@@ -115,7 +115,7 @@ export default function Model({districtName,setPopup}) {
                                             <table className="min-w-full bg-white border-collapse shadow-md rounded">
                                                 <thead>
                                                 <tr>
-                                                    <th className="border px-2 md:px-4 py-2 bg-gray-100 text-gray-700 font-semibold text-sm">Language</th>
+                                                    <th className="border px-2 md:px-4 py-2 bg-gray-100 text-gray-700 font-semibold text-sm">Speaker Reported Language</th>
                                                     <th className="border px-4 py-2 bg-gray-100 text-gray-700 font-semibold text-sm">Male Link</th>
                                                     <th className="border px-4 py-2 bg-gray-100 text-gray-700 font-semibold text-sm">Female Link</th>
                                                 </tr>
@@ -136,7 +136,7 @@ export default function Model({districtName,setPopup}) {
                                                                         Play Video
                                                                     </button>
                                                                 ) : (
-                                                                    <span className={"text-sm text-zinc-600"}>No Speaker Found Yet</span>
+                                                                    <span className={"text-sm text-zinc-600"}>-</span>
                                                                 )
                                                             }
 
@@ -153,7 +153,7 @@ export default function Model({districtName,setPopup}) {
                                                                         Play Video
                                                                     </button>
                                                                 ) : (
-                                                                    <span className={"text-xs text-zinc-600 sm:text-sm"}>No Speaker Found Yet</span>
+                                                                    <span className={"text-xs text-zinc-600 sm:text-sm"}>-</span>
                                                                 )
                                                             }
                                                         </td>
