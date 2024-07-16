@@ -51,3 +51,56 @@ The `getStaticProps` function revalidates the data every 600 seconds (10 minutes
 ---
 
 Follow the instructions above to set up and understand the structure of the Vaani homepage project.
+
+
+## Contributing
+
+We welcome contributions to improve the code and functionality of this project. Here are some ways you can contribute:
+
+### Fork the Repository
+- Click the "Fork" button at the top right of this page to create a copy of this repository in your GitHub account.
+
+### Clone the Repository
+- Clone your forked repository to your local machine:
+
+```sh
+git clone https://github.com/yourusername/climate-models.git
+
+```
+
+### Create a New Branch
+- Create a new branch for your feature or bugfix:
+
+```sh
+git checkout -b feature-name
+```
+
+### Make Your Changes
+
+- Make your changes to the code.
+
+### Commit Your Changes
+
+- Commit your changes with a meaningful commit message:
+
+```sh
+git commit -m "Add feature-name"
+```
+
+### Push to Your Branch
+- Push your changes to your forked repository:
+```sh
+git push origin feature-name
+
+```
+
+### Create a Pull Request
+- Create a pull request to the main repository with a description of your changes.
+
+### Code Style
+- Follow PEP8 guidelines for Python code.
+- Use meaningful variable and function names.
+- Add comments and docstrings to your code for better readability.
+
+
+Thank you for your contributions!
