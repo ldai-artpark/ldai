@@ -106,7 +106,16 @@ const HomepageDataAndMaps = ({ data }) => {
                             </tbody>
                         </table>
                     </div>
-                    <div className="h-auto md:grid md:grid-cols-7 ">
+                    <div className="h-auto md:grid md:grid-cols-7 relative">
+                        {/*** Added Button Start ***/}
+                        {dataLevel === "districts" && (
+                            <div className="absolute top-0 left-0 z-10 p-2">
+                                <button onClick={() => handleBacktoState()} className="mr-2 bg-white rounded-full p-1 shadow-md">
+                                    <ArrowLeftIcon className="h-5 w-5 text-indigo-700 text-bold" />
+                                </button>
+                            </div>
+                        )}
+                        {/*** Added Button End ***/}
                         <div className="md:col-start-2 md:col-span-6 ">
                             {breakpoint === 'sm' ? (
                                 <Choropleth
