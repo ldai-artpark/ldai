@@ -1,4 +1,4 @@
-l'use client'
+'use client'
 
 import { Container } from './Container'
 import HomepageDataAndMaps from './HomepageDataAndMaps'

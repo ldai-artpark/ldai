@@ -74,7 +74,7 @@ export function Stats({ stats }) {
     },
     {
       title: 'Total Images',
-      value: -,
+      value: 129028,
       logo: screenshotExpenses
     },
     {
