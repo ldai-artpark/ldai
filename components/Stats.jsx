@@ -43,11 +43,6 @@ export function Stats({ stats }) {
   // Create an array of features with proper data handling
   let features = [
     {
-      title: 'Total Files',
-      value: totalFiles,
-      logo: screenshotPayroll,
-    },
-    {
       title: 'Total Duration',
       value: formatStats(totalDuration),
       logo: screenshotExpenses,
@@ -58,13 +53,8 @@ export function Stats({ stats }) {
       logo: screenshotPayroll,
     },
     {
-      title: 'Male Audio',
-      value: maleSpeakers,
-      logo: screenshotExpenses,
-    },
-    {
-      title: 'Female Audio',
-      value: femaleSpeakers,
+      title: 'Total Languages',
+      value: 59,
       logo: screenshotExpenses,
     },
     {
@@ -81,6 +71,26 @@ export function Stats({ stats }) {
       title: 'States Covered',
       value: totalStates,
       logo: screenshotExpenses,
+    },
+    {
+      title: 'Total Images',
+      value: -,
+      logo: screenshotExpenses
+    },
+    {
+      title: 'Male Audio',
+      value: maleSpeakers,
+      logo: screenshotExpenses,
+    },
+    {
+      title: 'Female Audio',
+      value: femaleSpeakers,
+      logo: screenshotExpenses,
+    },
+    {
+      title: ' Total Files',
+      value: totalFiles,
+      logo: screenshotPayroll,
     }
   ]
 
