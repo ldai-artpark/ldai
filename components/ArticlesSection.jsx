@@ -18,11 +18,11 @@ const testimonials = [
   [
     {
       content:"",
-      authorName: " ARUN PADMANABHAN",
-      href: "https://www.moneycontrol.com/news/technology/indias-ai-uprising-can-a-challenger-emerge-in-the-llm-marathon-11931681.html",
-      articleTitle: "IISc/ARTPARK's Project Vaani identified as a key initiative in shaping India's LLM space",
-      date:"DECEMBER 21, 2023",
-      articleImage: article7
+      authorName: 'VIKAS SN',
+      href: "https://www.moneycontrol.com/technology/google-woos-indias-booming-ai-developer-community-with-new-tools-access-to-latest-models-article-12770940.html?classic=true",
+      articleTitle: "Google woos India's booming AI developer community with new tools",
+      date:"17 Jul 2024",
+      articleImage: article5
     },
     {
       content :' This is the fourth email I’ve sent to your support team. I am literally being held in jail for tax fraud. Please answer your damn emails, this is important.,',
@@ -32,8 +32,24 @@ const testimonials = [
       date:"Dec 20, 2023",
       articleImage: article8
     },
+    {
+      content:"",
+      authorName: " ARUN PADMANABHAN",
+      href: "https://www.moneycontrol.com/news/technology/indias-ai-uprising-can-a-challenger-emerge-in-the-llm-marathon-11931681.html",
+      articleTitle: "IISc/ARTPARK's Project Vaani identified as a key initiative in shaping India's LLM space",
+      date:"DECEMBER 21, 2023",
+      articleImage: article7
+    },
   ],
   [
+    {
+      content:"",
+      authorName: 'Suraksha P',
+      href: "https://economictimes.indiatimes.com/tech/technology/under-bhashini-iisc-to-open-source-16000-hours-of-speech-data/articleshow/111639325.cms?from=mdr",
+      articleTitle: "Under Bashini, IISc to open source 16,000 hours of speech data",
+      date:"11 Jul 2024",
+      articleImage: article3
+    },
     {
       content:
           'TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.',
@@ -75,7 +91,7 @@ const testimonials = [
 
   ],
 
-
+  
 ]
 
 function QuoteIcon(props) {
