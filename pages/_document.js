@@ -17,6 +17,20 @@ export default function Document() {
                 <link
                     href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto+Slab:wght@100;300;400;600;700&display=swap"
                     rel="stylesheet" />
+
+                        {/* Google Tag Manager */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHHQP1JHRW"></script>
+                <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-CHHQP1JHRW');
+                    `,
+                }}
+                />
+                    
             </Head>
             <body className={" text-zinc-700 dark:text-zinc-200 p-1 min-h-screen"}>
                 <Main />
