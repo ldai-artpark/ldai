@@ -105,6 +105,23 @@ const testimonials = [
         date:"28 Jun 2023",
         articleImage: article5
     },
+    {
+        content:"",
+        authorName: " ARUN PADMANABHAN",
+        href: "https://www.moneycontrol.com/news/technology/indias-ai-uprising-can-a-challenger-emerge-in-the-llm-marathon-11931681.html",
+        articleTitle: "IISc/ARTPARK's Project Vaani identified as a key initiative in shaping India's LLM space",
+        date:"DECEMBER 21, 2023",
+        articleImage: article7
+    },
+    {
+        content:
+            'There are so many things I had to do with my old software that I just don’t do at all with TaxPal. Suspicious but I can’t say I don’t love it.',
+        authorName: 'Keerthana Kantharaj',
+        href: "https://www.ceoinsightsindia.com/business-inside/india-s-first-google-io-connect-the-future-of-user-experience-is-here-nwid-14737.html",
+        articleTitle: "India's First Google I/O Connect: The Future of User Experience is Here",
+        date:"",
+        articleImage: article4
+    }, 
 
 
 ]

@@ -116,8 +116,8 @@ export default function Model({districtName,setPopup}) {
                                                 <thead>
                                                 <tr>
                                                     <th className="border px-2 md:px-4 py-2 bg-gray-100 text-gray-700 font-semibold text-sm">Speaker Reported Language</th>
-                                                    <th className="border px-4 py-2 bg-gray-100 text-gray-700 font-semibold text-sm">Male Link</th>
-                                                    <th className="border px-4 py-2 bg-gray-100 text-gray-700 font-semibold text-sm">Female Link</th>
+                                                    <th className="border px-4 py-2 bg-gray-100 text-gray-700 font-semibold text-sm">Male Speaker</th>
+                                                    <th className="border px-4 py-2 bg-gray-100 text-gray-700 font-semibold text-sm">Female Speaker</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
@@ -149,14 +149,14 @@ export default function Model({districtName,setPopup}) {
                                                                             e.preventDefault();
                                                                             setLink(data[language]["female"][getRandomNumber(data[language]["female"].length)].link)
                                                                         }}
-                                                                        className="rounded bg-indigo-600 px-2 py-1 text-xs md:text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                                                        className="flex justify-center rounded bg-indigo-600 px-2 py-1 text-xs md:text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                                                         Play Video
                                                                     </button>
                                                                 ) : (
                                                                     <span className={"text-xs text-zinc-600 sm:text-sm"}>-</span>
                                                                 )
                                                             }
-                                                        </td>
+                                                        </td>   
                                                     </tr>
                                                 ))}
                                                 </tbody>
