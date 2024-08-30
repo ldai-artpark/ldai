@@ -16,6 +16,7 @@ import {useEffect, useState} from "react";
 
 const testimonials = [
 
+    
     {
         content:
             '',
@@ -104,6 +105,14 @@ const testimonials = [
         articleTitle: "Google’s efforts to enhance Indian language data and combat AI bias",
         date:"28 Jun 2023",
         articleImage: article5
+    },
+    {
+        content: '',
+        authorName: 'ETtech',
+        href: "https://economictimes.indiatimes.com/tech/technology/google-deepminds-morni-ai-to-cover-125-indic-languages/articleshow/112904640.cms?from=mdr",
+        articleTitle: "Google DeepMind's Morni AI to cover 125 Indic Languages",
+        date:"30 Aug 2024",
+        articleImage: article1
     },
 
 
