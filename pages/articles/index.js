@@ -121,7 +121,15 @@ const testimonials = [
         articleTitle: "India's First Google I/O Connect: The Future of User Experience is Here",
         date:"",
         articleImage: article4
-    }, 
+    },
+    {
+        content: '',
+        authorName: 'ETtech',
+        href: "https://economictimes.indiatimes.com/tech/technology/google-deepminds-morni-ai-to-cover-125-indic-languages/articleshow/112904640.cms?from=mdr",
+        articleTitle: "Google DeepMind's Morni AI to cover 125 Indic Languages",
+        date:"30 Aug 2024",
+        articleImage: article1
+    },
 
 
 ]
