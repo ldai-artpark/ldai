@@ -110,8 +110,8 @@ const HomepageDataAndMaps = ({ data }) => {
                                     <th className="">Speaker <br />  Count</th>
                                     {dataLevel === "states" && (<th>Transcription <br /> Duration (Hrs)</th>)}
                                     {dataLevel === "districts" && (<th>Transcription <br />   Duration (Hrs)</th>)}
-                                    <th>Languages</th>
-                                    <th>Language Count</th>
+                                    {dataLevel === "states" && (<th>Languages</th>)}  {/* Languages header rendered only for states */}
+                                    {dataLevel === "states" && (<th>Language Count</th>)}
                                 </tr>
                             </thead>
                             <tbody>
@@ -136,8 +136,6 @@ const HomepageDataAndMaps = ({ data }) => {
                                             <td className="bg-slate-50">{elements.duration_per_district_hrs.toFixed(2)}</td>
                                             <td className="bg-slate-50" >{elements.spks_per_district}</td>
                                             <td className="bg-slate-50">{parseFloat(elements.transcription_duration).toFixed(2)}</td>
-                                            <td className="bg-slate-50">N/A</td>
-                                            <td className="bg-slate-50">{languageCountMap[elements.id] || 0}</td>
                                         </tr>
                                     );
                                 })}
