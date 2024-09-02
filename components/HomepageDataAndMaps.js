@@ -7,6 +7,38 @@ import useBreakpoint from "../hooks/useBreakpoint";
 import { feature } from "topojson-client";
 import Model from "../components/Model"
 import { ArrowLeftIcon } from "@heroicons/react/solid";
+
+const languageMap = {
+    "AndhraPradesh": "Bengali, Bhojpuri, English, Hindi, Kannada, Maithili, Marathi, Santali, Tamil, Telugu, Urdu ", // Replace "state1" and "Language1" with actual state IDs and languages
+    "Bihar": "Angika, Bajjika, Bantar, Bengali, Bhojpuri, Chattisgarhi, Hindi, Kannada, Khortha, Konkani, Kortha, Kurumali, Magahi, Maithili, Marathi, Marwari, Nepalese, Sadri, Surjapuri, Tamil, Telugu, Urdu ",
+    "Chhattisgarh": "Agariya, Awadhi, Bengali, Bhatri, Chattisgarhi, Dorli, Duruwa, English, Gondi, Halbi, Hindi, Kannada, Kudukh, Kurukh, Maithili, Marathi, Nagpuri, Odia, Sadri, Surgujia ",
+    "Goa": "Bengali, Gujarati, Hindi, Kannada, Konkani, Marathi",
+    "Jharkhand": "Angika, Bengali, Bhojpuri, Chattisgarhi, English, Hindi, Khortha, Kurumali, Magahi, Maithili, Marathi, Santali ",
+    "Karnataka": "Bearybashe, Bengali, Bhojpuri, English, Hindi, Kannada, Lambadi, Malayalam, Marathi, Tamil, Telugu, Tulu, Unknown, Urdu ",
+    "Maharashtra": "Bengali, Bhili, Chattisgarhi, Gujarati, Hindi, Kannada, Khandeshi, Maithili, Malvani, Marathi, Telugu, Urdu ",
+    "Rajasthan": "Bagri, Bengali, English, Gujarati, Harauti, Hindi, Jaipuri, Marathi, Marwari, Mewari, Rajasthani, Shekhawati, Wagdi ",
+    "Telangana": "Bengali, English, Hindi, Lambadi, Malayalam, Telugu, Urdu ",
+    "Uttarakhand": "Bengali, Garhwali, Hindi, Kumaoni, Maithili, Marathi ",
+    "UttarPradesh": "Assamese, Awadhi, Badayuni, Bengali, Bhojpuri, Bundeli, Chattisgarhi, English, Gujarati, Hindi, Kannada, Khari Boli, Maithili, Marathi, Tamil, Urdu",
+    "WestBengal": "Bengali, Bhojpuri, Hindi, Marathi, Rajbangshi, Sadri, Santali ",
+    // Add other states and their languages here
+};
+
+const languageCountMap = {
+    "AndhraPradesh": 11,
+    "Bihar": 22,
+    "Chhattisgarh": 20,
+    "Goa": 6,
+    "Jharkhand": 12,
+    "Karnataka": 14,
+    "Maharashtra": 12,
+    "Rajasthan": 13,
+    "Telangana": 7,
+    "Uttarakhand": 6,
+    "UttarPradesh": 14,
+    "WestBengal":7,
+    // Continue for all relevant states and districts
+};
 const HomepageDataAndMaps = ({ data }) => {
 
     const [breakpoint] = useBreakpoint();
@@ -60,14 +92,14 @@ const HomepageDataAndMaps = ({ data }) => {
             <section className="w-full ">
                 {popup && (<Model districtName={districtName} setPopup={setPopup} />)}
                 <div className="pt-5 flex flex-col gap-4 justify-center md:grid md:grid-cols-2 md:gap-4 md:p-10 text-zinc-900">
-                    <div className="overflow-x-auto  pb-5">
+                    <div className="overflow-x-auto  pb-5 w-full">
                         <span className={'text-xs text-indigo-700 block sm:hidden my-2 '}> Want to hear the voices out? Click on the {dataLevel === "states" ? "states" : "district"} .</span>
                         <table className="table table-compact md:w-full">
                             <thead>
                                 <tr>
-                                    {dataLevel === "states" && (<th className=" pl-4 ">States </th>)}
+                                    {dataLevel === "states" && (<th className=" pl-4 sticky left-0 z-20">States </th>)}
                                     {dataLevel === "districts" && (
-                                        <th className=" pl-4 flex items-center">
+                                        <th className=" pl-4 flex items-center sticky left-0 z-20">
                                             <button onClick={() => handleBacktoState()} className="mr-2">
                                                 <ArrowLeftIcon className="h-5 w-5 text-indigo-700 text-bold" />
                                             </button>
@@ -78,16 +110,20 @@ const HomepageDataAndMaps = ({ data }) => {
                                     <th className="">Speaker <br />  Count</th>
                                     {dataLevel === "states" && (<th>Transcription <br /> Duration (Hrs)</th>)}
                                     {dataLevel === "districts" && (<th>Transcription <br />   Duration (Hrs)</th>)}
+                                    <th>Languages</th>
+                                    <th>Language Count</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {dataLevel === "states" && stateWiseData?.map((elements) => {
                                     return (
                                         <tr key={elements} className="light:hover text-semibold">
-                                            <td className="bg-slate-50 pl-4"><button onClick={() => handleOnClickState(elements.id)}><span className="hover:font-semibold">{elements.id}</span></button></td>
+                                            <td className="bg-slate-50 pl-4 sticky left-0 z-10"><button onClick={() => handleOnClickState(elements.id)}><span className="hover:font-semibold">{elements.id}</span></button></td>
                                             <td className="bg-slate-50">{elements.total_duration_hrs.toFixed(2)}</td>
                                             <td className="bg-slate-50">{elements.total_speakers}</td>
                                             <td className={"bg-slate-50"}>{elements.transcription_duration_state ? parseFloat(elements.transcription_duration_state).toFixed(2) : "0.00"}</td>
+                                            <td className="bg-slate-50">{languageMap[elements.id] || "N/A"}</td>
+                                            <td className="bg-slate-50 text-center">{languageCountMap[elements.id] || 0}</td> 
                                         </tr>
                                     );
                                 })}
@@ -100,6 +136,8 @@ const HomepageDataAndMaps = ({ data }) => {
                                             <td className="bg-slate-50">{elements.duration_per_district_hrs.toFixed(2)}</td>
                                             <td className="bg-slate-50" >{elements.spks_per_district}</td>
                                             <td className="bg-slate-50">{parseFloat(elements.transcription_duration).toFixed(2)}</td>
+                                            <td className="bg-slate-50">N/A</td>
+                                            <td className="bg-slate-50">{languageCountMap[elements.id] || 0}</td>
                                         </tr>
                                     );
                                 })}
