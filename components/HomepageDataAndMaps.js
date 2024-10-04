@@ -9,20 +9,103 @@ import Model from "../components/Model"
 import { ArrowLeftIcon } from "@heroicons/react/solid";
 
 const languageMap = {
-    "AndhraPradesh": "Bengali, Bhojpuri, English, Hindi, Kannada, Maithili, Marathi, Santali, Tamil, Telugu, Urdu ", // Replace "state1" and "Language1" with actual state IDs and languages
-    "Bihar": "Angika, Bajjika, Bantar, Bengali, Bhojpuri, Chattisgarhi, Hindi, Kannada, Khortha, Konkani, Kortha, Kurumali, Magahi, Maithili, Marathi, Marwari, Nepalese, Sadri, Surjapuri, Tamil, Telugu, Urdu ",
-    "Chhattisgarh": "Agariya, Awadhi, Bengali, Bhatri, Chattisgarhi, Dorli, Duruwa, English, Gondi, Halbi, Hindi, Kannada, Kudukh, Kurukh, Maithili, Marathi, Nagpuri, Odia, Sadri, Surgujia ",
-    "Goa": "Bengali, Gujarati, Hindi, Kannada, Konkani, Marathi",
-    "Jharkhand": "Angika, Bengali, Bhojpuri, Chattisgarhi, English, Hindi, Khortha, Kurumali, Magahi, Maithili, Marathi, Santali ",
-    "Karnataka": "Bearybashe, Bengali, Bhojpuri, English, Hindi, Kannada, Lambadi, Malayalam, Marathi, Tamil, Telugu, Tulu, Unknown, Urdu ",
-    "Maharashtra": "Bengali, Bhili, Chattisgarhi, Gujarati, Hindi, Kannada, Khandeshi, Maithili, Malvani, Marathi, Telugu, Urdu ",
-    "Rajasthan": "Bagri, Bengali, English, Gujarati, Harauti, Hindi, Jaipuri, Marathi, Marwari, Mewari, Rajasthani, Shekhawati, Wagdi ",
-    "Telangana": "Bengali, English, Hindi, Lambadi, Malayalam, Telugu, Urdu ",
-    "Uttarakhand": "Bengali, Garhwali, Hindi, Kumaoni, Maithili, Marathi ",
-    "UttarPradesh": "Assamese, Awadhi, Badayuni, Bengali, Bhojpuri, Bundeli, Chattisgarhi, English, Gujarati, Hindi, Kannada, Khari Boli, Maithili, Marathi, Tamil, Urdu",
-    "WestBengal": "Bengali, Bhojpuri, Hindi, Marathi, Rajbangshi, Sadri, Santali ",
+    "AndhraPradesh": "Telugu(985.09), Hindi(120.58), Urdu(18.75), Tamil(4.15), Bengali(2.91), Marathi(2.31), Kannada(0.59), Bhojpuri(0.20), Santali(0.12), English(0.12), Maithili(0.04) ", // Replace "state1" and "Language1" with actual state IDs and languages
+    "Bihar": "Hindi(2848.09), Maithili(369.27), Bhojpuri(159), Magahi(94.97), Angika(81.83), Bajjika(59.77), Urdu(42.95), Surjapuri(25.91), Bengali(6.49), Marathi(5.15), Kurumali(0.86), Bantar(0.60), Telugu(0.43), Kannada(0.35), Sadri(0.28), Tamil(0.25), Khortha(0.23), Chattisgarhi(0.21), Kortha(0.18), Konkani(0.17), Nepalese(0.14), Marwari(0.04) ",
+    "Chhattisgarh": "Hindi(1273.13), Chattisgarhi(325.77), Halbi(36.67), Sadri(22.73), Surgujia(11.28), Kurukh(10.99), Awadhi(5.75), Gondi(3.59), Nagpuri(1.99), Bengali(1.76), Odia(1.56), Dorli(1.36), Marathi(0.91), Bhatri(0.90), Duruwa(0.52), Maithili(0.48), Kudukh(0.28), Kannada(0.12), English(0.09), Agariya(0.03)",
+    "Goa": "Hindi(79.80), Konkani(59.62), Marathi(22.62), Bengali(0.38), Kannada(0.28), Gujarati(0.21)",
+    "Jharkhand": "Hindi(291.39), Bengali(42), Khortha(25.95), Santali(5.38), Bhojpuri(1.13), Marathi(0.92), Angika(0.63), Magahi(0.46), Maithili(0.36), Kurumali(0.13), English(0.05), Chattisgarhi(0.04) ",
+    "Karnataka": "Kannada(1392.75), Hindi(94.10), Telugu(89.63), Tulu(39.57), Marathi(27.85), Urdu(26.02), Bearybashe(6.86), Tamil(5.13), Malayalam(2.31), Bengali(1.90), Bhojpuri(0.52), English(0.49), Lambadi(0.21) ",
+    "Maharashtra": "Marathi(840.15), Hindi(352.99), Malvani(13.86), Khandeshi(5.62), Bhili(2.76), Maithili(0.57), Kannada(0.25), Bengali(0.24), Chattisgarhi(0.16), Telugu(0.07), Gujarati(0.05), Urdu(0.04)",
+    "Rajasthan": "Rajasthani(152), Hindi(100.93), Marwari(91.27), Jaipuri(1.84), Shekhawati(0.77), Bengali(0.62), Mewari(0.56), Bagri(0.50), Harauti(0.27), Wagdi(0.25), Gujarati(0.19), English(0.09), Marathi(0.04) ",
+    "Telangana": "Telugu(411.86), Hindi(11.86), Urdu(1.73), Bengali(0.70), English(0.61), Lambadi(0.44), Malayalam(0.15) ",
+    "Uttarakhand": "Hindi(217.14), Garhwali(115.25), Kumaoni(23.10), Bengali(0.66), Maithili(0.52), Marathi(0.49) ",
+    "UttarPradesh": "Hindi(1576.04), Bhojpuri(238.04), Khari Boli(15.97), Bundeli(8.38), Marathi(5.76), Urdu(3.93), Awadhi(1.91), Bengali(0.74), Badayuni(0.46), Maithili(0.26), Tamil(0.26), Chattisgarhi(0.25), English(0.21), Assamese(0.18), Kannada(0.13), Gujarati(0.09)",
+    "WestBengal": "Bengali(1422.67), Hindi(53.71), Marathi(1.87), Sadri(0.59), Bhojpuri(0.24), Santali(0.22), Rajbangshi(0.17) ",
     // Add other states and their languages here
 };
+
+const districtLanguageMap = {
+    "Anantpur": "Bengali, Hindi, Kannada, Marathi, Tamil, Telugu, Urdu",
+    "Araria": "Angika, Bengali, Bhojpuri, Hindi, Maithili, Telugu, Urdu",
+    "Aurangabad": "Bengali, Hindi, Marathi, Telugu",
+    "Balrampur": "Awadhi, Chhattisgarhi, Hindi",
+    "Bastar": "Bengali, Bhatri, Chhattisgarhi, Gond, Halbi, Hindi, Odia",
+    "Begusarai": "Angika, Bhojpuri, Hindi, Magahi, Maithili, Telugu, Urdu",
+    "Belgaum": "Hindi, Kannada, Malayalam, Marathi, Telugu, Urdu",
+    "Bellary": "Bearybashe, English, Hindi, Kannada, Malayalam, Tamil, Telugu, Urdu",
+    "Bhagalpur": "Angika, Bengali, Bhojpuri, Hindi, Magahi, Maithili, Marathi, Telugu, Urdu",
+    "Bijapur": "Bengali, English, Hindi, Kannada, Malayalam, Telugu, Urdu",
+    "Bilaspur": "Bengali, Chhattisgarhi, Hindi, Maithili, Marathi",
+    "Budaun": "Awadhi, Badayuni, Bengali, Bundeli, Hindi, Khari Boli, Marathi, Urdu",
+    "Chamrajnagar": "Hindi, Kannada, Malayalam, Tamil, Telugu",
+    "Chandrapur": "Hindi, Malvani, Marathi",
+    "Chittoor": "Bengali, Hindi, Santali, Tamil, Telugu",
+    "Churu": "Bagri, Bengali, English, Gujarati, Harauti, Hindi, Jaipuri, Marwari, Mewari, Rajasthani, Shekhawati, Wagdi",
+    "DakshinDinajpur": "Bengali, Hindi",
+    "DakshinKannada": "Bearybashe, Hindi, Kannada, Malayalam, Telugu, Tulu, Unknown, Urdu",
+    "Darbhanga": "Hindi, Kannada, Maithili, Marathi, Urdu",
+    "Deoria": "Awadhi, Bhojpuri, Hindi, Khari Boli, Maithili, Marathi",
+    "Dharwad": "Bhojpuri, Hindi, Kannada, Malayalam, Telugu, Urdu",
+    "Dhule": "Bhili, Hindi, Khandeshi, Marathi",
+    "EastChamparan": "Bengali, Bhojpuri, Hindi, Maithili, Marathi, Urdu",
+    "Etah": "English, Hindi, Khari Boli, Marathi",
+    "Gaya": "Bengali, Bhojpuri, Hindi, Magahi, Maithili, Marathi, Marwari",
+    "Ghazipur": "Awadhi, Bengali, Bhojpuri, Chhattisgarhi, Hindi, Khari Boli, Marathi, Tamil, Urdu",
+    "Gopalganj": "Bengali, Bhojpuri, Hindi, Maithili, Marathi",
+    "Gorakhpur": "Bhojpuri, Hindi, Khari Boli, Marathi",
+    "Gulbarga": "Hindi, Kannada, Malayalam, Marathi, Urdu",
+    "Guntur": "Bengali, English, Hindi, Marathi, Tamil, Telugu, Urdu",
+    "Hamirpur": "Awadhi, Bengali, Bundeli, Hindi, Khari Boli, Marathi, Urdu",
+    "Jahanabad": "Bengali, Hindi, Magahi, Maithili, Marathi, Urdu",
+    "Jalaun": "Assamese, Awadhi, Bundeli, Gujarati, Hindi, Khari Boli, Marathi",
+    "Jalpaiguri": "Bengali, Hindi, Marathi, Sadri",
+    "Jamtara": "Bengali, Bhojpuri, Hindi, Khortha, Maithili, Marathi",
+    "Jamui": "Angika, Bengali, Hindi, Magahi, Maithili, Tamil",
+    "Jashpur": "Agariya, Bengali, Chhattisgarhi, Hindi, Kudukh, Kurukh, Nagpuri, Odia, Sadri",
+    "Jhargram": "Bengali, Bhojpuri, Hindi, Marathi",
+    "JyotibaPhuleNagar": "English, Hindi, Khari Boli, Marathi, Urdu",
+    "Kabirdham": "Chhattisgarhi, Hindi, Maithili, Marathi",
+    "Karimnagar": "Bengali, English, Hindi, Telugu, Urdu",
+    "Kishanganj": "Bengali, Hindi, Magahi, Maithili, Marathi, Surjapuri, Urdu",
+    "Kolkata": "Bengali, Hindi",
+    "Korba": "Chhattisgarhi, Hindi",
+    "Krishna": "Bengali, English, Hindi, Marathi, Tamil, Telugu",
+    "Lakhisarai": "Bhojpuri, Hindi, Konkani, Magahi, Maithili, Marathi, Telugu",
+    "Madhepura": "Angika, Bengali, Hindi, Khortha, Magahi, Maithili, Marathi, Telugu",
+    "Malda": "Bengali, Hindi, Marathi",
+    "Muzaffarpur": "Angika, Bajjika, Bengali, Bhojpuri, Hindi, Kurumali, Maithili",
+    "Muzzaffarnagar": "Awadhi, Hindi, Kannada, Khari Boli, Marathi, Urdu",
+    "Mysore": "Bengali, Hindi, Kannada, Lambadi, Malayalam, Tamil, Telugu, Urdu",
+    "Nagaur": "Bengali, Hindi, Jaipuri, Marathi, Marwari, Mewari, Rajasthani",
+    "Nagpur": "Chhattisgarhi, Gujarati, Hindi, Malvani, Marathi",
+    "Nalgonda": "Bengali, Hindi, Lambadi, Malayalam, Telugu",
+    "North24Parganas": "Bengali, Hindi, Marathi",
+    "NorthSouthGoa": "Bengali, Gujarati, Hindi, Kannada, Konkani, Marathi",
+    "PaschimMedinipur": "Bengali, Hindi",
+    "Pune": "Hindi, Maithili, Marathi, Urdu",
+    "Purnia": "Angika, Chhattisgarhi, Hindi, Maithili, Urdu",
+    "Purulia": "Bengali, Hindi, Rajbangshi, Santali",
+    "Raichur": "Bhojpuri, Hindi, Kannada, Malayalam, Telugu, Urdu",
+    "Raigarh": "Chhattisgarhi, Hindi, Odia",
+    "Rajnandgaon": "Bengali, Chhattisgarhi, English, Hindi, Kannada, Marathi",
+    "Saharsa": "Angika, Bengali, Chhattisgarhi, Hindi, Kannada, Magahi, Maithili, Urdu",
+    "Sahebganj": "Angika, Bengali, Bhojpuri, Chhattisgarhi, English, Hindi, Khorth, Kurumali, Magahi, Marathi, Santali",
+    "Samastipur": "Angika, Bajjika, Bhojpuri, Hindi, Magahi, Maithili, Urdu",
+    "Saran": "Bhojpuri, Hindi, Maithili, Marathi",
+    "Sarguja": "Bengali, Chhattisgarhi, Hindi, Kurukh, Surgujia",
+    "Shimoga": "Bengali, Hindi, Kannada, Malayalam, Tamil, Telugu, Urdu",
+    "Sindhudurga": "Hindi, Malvani, Marathi",
+    "Sitamarhi": "Angika, Bajjika, Bantar, Bhojpuri, Hindi, Khorth, Korth, Maithili, Sadri, Tamil, Urdu",
+    "Solapur": "Bengali, Hindi, Kannada, Maithili, Malvani, Marathi",
+    "Srikakulam": "Bhojpuri, Hindi, Kannada, Marathi, Telugu",
+    "Sukma": "Bengali, Chhattisgarhi, Dorli, Duruwa, Gond, Hindi, Odia",
+    "Supaul": "Angika, Bhojpuri, Hindi, Maithili, Urdu",
+    "TehriGarhwal": "Bengali, Garhwali, Hindi, Kumaoni, Marathi",
+    "Uttarkashi": "Bengali, Garhwali, Hindi, Kumaoni, Maithili, Marathi",
+    "Vaishali": "Bajjika, Bengali, Bhojpuri, Hindi, Maithili, Marathi, Nepalese",
+    "Varanasi": "Awadhi, Bengali, Bhojpuri, Hindi, Khari Boli, Marathi",
+    "Vishakapattanam": "Bengali, Hindi, Kannada, Maithili, Marathi, Tamil, Telugu"
+};  
 
 const languageCountMap = {
     "AndhraPradesh": 11,
@@ -30,12 +113,12 @@ const languageCountMap = {
     "Chhattisgarh": 20,
     "Goa": 6,
     "Jharkhand": 12,
-    "Karnataka": 14,
+    "Karnataka": 13,
     "Maharashtra": 12,
     "Rajasthan": 13,
     "Telangana": 7,
     "Uttarakhand": 6,
-    "UttarPradesh": 14,
+    "UttarPradesh": 16,
     "WestBengal":7,
     // Continue for all relevant states and districts
 };
@@ -65,7 +148,10 @@ const HomepageDataAndMaps = ({ data }) => {
         }
         return (data?.data?.["all"] || []).filter(elements => {
             return elements.state === state;
-        });
+        }).map(district => ({
+            ...district,
+            language:districtLanguageMap[district.id] || "N/A",
+        }));
     }, [state, data]);
 
     const handleOnClickState = (stateName) => {
@@ -110,8 +196,9 @@ const HomepageDataAndMaps = ({ data }) => {
                                     <th className="">Speaker <br />  Count</th>
                                     {dataLevel === "states" && (<th>Transcription <br /> Duration (Hrs)</th>)}
                                     {dataLevel === "districts" && (<th>Transcription <br />   Duration (Hrs)</th>)}
-                                    {dataLevel === "states" && (<th>Languages</th>)}  {/* Languages header rendered only for states */}
+                                    {dataLevel === "states" && (<th>Languages(HRS)</th>)}  {/* Languages header rendered only for states */}
                                     {dataLevel === "states" && (<th>Language Count</th>)}
+                                    {dataLevel == "districts" && (<th>Languages</th>)}
                                 </tr>
                             </thead>
                             <tbody>
@@ -132,10 +219,11 @@ const HomepageDataAndMaps = ({ data }) => {
                                 }).map((elements) => {
                                     return (
                                         <tr key={elements} className="light:hover">
-                                            <td className="bg-slate-50 hover:link pl-4 hover:font-semibold" onClick={() => { hadleClickDistrict(elements.id) }}>{elements.id}</td>
+                                            <td className="bg-slate-50 hover:link pl-4 hover:font-semibold sticky left-0 z-10" onClick={() => { hadleClickDistrict(elements.id) }}>{elements.id}</td>
                                             <td className="bg-slate-50">{elements.duration_per_district_hrs.toFixed(2)}</td>
                                             <td className="bg-slate-50" >{elements.spks_per_district}</td>
                                             <td className="bg-slate-50">{parseFloat(elements.transcription_duration).toFixed(2)}</td>
+                                            <td className="bg-slate-50">{elements.language}</td>
                                         </tr>
                                     );
                                 })}
