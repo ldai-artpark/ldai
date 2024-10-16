@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
 // Language data (can be passed as a prop or stored locally)
@@ -83,9 +83,29 @@ const languageData = [
 
   export default function LanguageSection() {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const itemsPerSlide = 2; // Number of items per slide (adjust for mobile)
-    const [isPlaying, setIsPlaying] = useState(null); // Track which audio is playing
-    const audioRef = useRef(null); // Reference for the audio element
+    const [itemsPerSlide, setItemsPerSlide] = useState(2); // Default to 2 for larger screens
+    const [isPlaying, setIsPlaying] = useState(null);
+    const audioRef = useRef(null);
+  
+    useEffect(() => {
+      const updateItemsPerSlide = () => {
+        if (window.innerWidth < 640) {
+          setItemsPerSlide(1); // 1 item per slide for mobile
+        } else {
+          setItemsPerSlide(2); // 2 items per slide for larger screens
+        }
+      };
+  
+      // Initial check
+      updateItemsPerSlide();
+      // Listen for resize events
+      window.addEventListener('resize', updateItemsPerSlide);
+  
+      // Cleanup listener on component unmount
+      return () => {
+        window.removeEventListener('resize', updateItemsPerSlide);
+      };
+    }, []);
   
     // Divide languages into chunks for the slides
     const slides = [];
@@ -104,7 +124,7 @@ const languageData = [
     const toggleAudio = (audioUrl, index) => {
       if (audioRef.current && isPlaying === index) {
         audioRef.current.pause();
-        setIsPlaying(null); // Reset the playing state
+        setIsPlaying(null);
       } else {
         if (audioRef.current) {
           audioRef.current.pause();
@@ -113,10 +133,9 @@ const languageData = [
   
         const newAudio = new Audio(audioUrl);
         audioRef.current = newAudio;
-        setIsPlaying(index); // Mark the current playing index
+        setIsPlaying(index);
   
         newAudio.play();
-  
         newAudio.onended = () => {
           setIsPlaying(null);
         };
@@ -127,7 +146,7 @@ const languageData = [
       <div className="mt-10 flex items-center justify-center">
         {/* Chevron Left Icon for Previous */}
         <ChevronLeftIcon 
-          className="h-8 w-8 cursor-pointer text-gray-700 hidden sm:block"  // Hidden on small screens
+          className="h-8 w-8 cursor-pointer text-gray-700 sm:block"  // Show on all screens
           onClick={prevSlide} 
         />
   
@@ -154,7 +173,7 @@ const languageData = [
   
         {/* Chevron Right Icon for Next */}
         <ChevronRightIcon 
-          className="h-8 w-8 cursor-pointer text-gray-700 hidden sm:block"  // Hidden on small screens
+          className="h-8 w-8 cursor-pointer text-gray-700 sm:block"  // Show on all screens
           onClick={nextSlide} 
         />
       </div>
