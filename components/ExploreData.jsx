@@ -140,8 +140,8 @@ export function ExploreData({ data }) {
           <div className="flex justify-around w-full">
             {slides[currentSlide].map((language, index) => (
               <div key={index} className="mx-4 p-4 bg-white rounded shadow text-center w-1/2">
-                <h3 className="font-bold text-lg">{language.name}</h3>
-                <p className="mt-4">{language.description}</p>
+                <h3 className="font-bold text-lg text-black">{language.name}</h3>
+                <p className="mt-4 text-black">{language.description}</p>
                 <button
                   className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                   onClick={() => {
