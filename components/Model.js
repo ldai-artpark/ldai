@@ -138,7 +138,7 @@ export default function Model({ districtName, setPopup }) {
                                                                     <button
                                                                         onClick={(e) => {
                                                                             e.preventDefault();
-                                                                            setLink(data[language].male[getRandomNumber(data[language].male.length)]?.link);
+                                                                            setLink(data[language].male[data[language].male.length - 1]?.link);
                                                                         }}
                                                                         className="rounded bg-indigo-600 px-2 py-1 text-xs md:text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                                                         Play Video
@@ -152,7 +152,7 @@ export default function Model({ districtName, setPopup }) {
                                                                     <button
                                                                         onClick={(e) => {
                                                                             e.preventDefault();
-                                                                            setLink(data[language].female[getRandomNumber(data[language].female.length)]?.link);
+                                                                            setLink(data[language].female[data[language].female.length - 1]?.link);
                                                                         }}
                                                                         className="flex justify-center rounded bg-indigo-600 px-2 py-1 text-xs md:text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                                                                         Play Video
