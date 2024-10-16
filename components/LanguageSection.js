@@ -138,8 +138,8 @@ const languageData = [
               key={index} 
               className="mx-4 p-4 bg-white rounded shadow text-center w-full sm:w-1/2 mt-4 sm:mt-0"
             >
-              <h3 className="font-bold text-lg sm:text-xl">{language.name}</h3>
-              <p className="mt-4 text-sm sm:text-base">{language.description}</p>
+              <h3 className="font-bold text-lg sm:text-xl text-black">{language.name}</h3>
+              <p className="mt-4 text-sm sm:text-base text-black">{language.description}</p>
               <button
                 className={`mt-4 px-4 py-2 rounded text-sm sm:text-base ${
                   isPlaying === index ? 'bg-red-600' : 'bg-blue-600'
