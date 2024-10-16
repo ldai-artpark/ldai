@@ -11,7 +11,7 @@ export function DownloadSection() {
 
   return (
     <section
-      id="Team"
+      id=""
       className="relative overflow-hidden bg-blue-600 py-32"
     >
       {popup && <Model2 />}
